@@ -1,8 +1,5 @@
 import json
-
 from django.contrib.auth.models import User
-from django.core.exceptions import ObjectDoesNotExist
-
 from .models import Profile, Avatar
 from django.contrib.auth import login, logout, authenticate
 from .serializers import UserRegisterSerializer, ProfileSerializer
@@ -94,21 +91,14 @@ class AvatarChangeAPIView(APIView):
 
     def post(self, request):
         avatar = request.FILES['avatar']
-        print('*******************************************************')
-        print('Блок до if')
         if avatar:
             if Avatar.objects.filter(user_id=request.user.pk).exists():
-                print('*******************************************************')
-                print(Avatar.objects.filter(user_id=request.user.pk).exists())
                 user_avatar = Avatar.objects.get(user_id=request.user.pk)
                 user_avatar.src = avatar
                 user_avatar.save()
                 return Response(status=status.HTTP_200_OK)
             else:
-                print('*******************************************************')
-                print('Попал в создание объекта')
                 profile = Profile.objects.get(user_id=request.user.pk)
-                print(profile)
                 Avatar.objects.create(
                     user_id=profile.user_id,
                     src=avatar,

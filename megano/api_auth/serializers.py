@@ -27,7 +27,6 @@ class UserRegisterSerializer(serializers.ModelSerializer):
             'password',
         ]
 
-    # Метод для сохранения нового пользователя
     def save(self, request):
         # Создаём объект класса User
         name = self.validated_data['name']

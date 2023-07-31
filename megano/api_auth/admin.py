@@ -13,3 +13,4 @@ class Profile(admin.ModelAdmin):
     inlines = [
         ProfileInline
     ]
+
