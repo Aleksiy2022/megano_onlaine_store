@@ -1,5 +1,7 @@
 import json
 from django.contrib.auth.models import User
+
+from cart.utils import merge_carts
 from .models import Profile, Avatar
 from django.contrib.auth import login, logout, authenticate
 from .serializers import UserRegisterSerializer, ProfileSerializer
@@ -7,7 +9,6 @@ from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.request import Request
 from rest_framework.response import Response
-
 
 class LoginAPIView(APIView):
 
@@ -21,6 +22,7 @@ class LoginAPIView(APIView):
             password=password,
         )
         if user:
+            merge_carts(request=request, user=user)
             login(request, user)
             return Response(status=status.HTTP_200_OK)
         else:
@@ -30,8 +32,8 @@ class LoginAPIView(APIView):
 class LogoutAPIView(APIView):
 
     def post(self, request):
-        user = request.user
         logout(request)
+        user = request.user
         if user is not None:
             return Response(status=status.HTTP_200_OK)
         else:

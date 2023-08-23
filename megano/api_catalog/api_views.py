@@ -78,12 +78,8 @@ class CatalogAPIView(ListAPIView):
 
         if self.request.query_params.get('filter[freeDelivery]') == 'true':
             set_if_not_empty(filter_params, 'freeDelivery', True)
-        elif self.request.query_params.get('filter[freeDelivery]') == 'false':
-            set_if_not_empty(filter_params, 'freeDelivery', False)
 
-        if self.request.query_params.get('filter[available]') == 'false':
-            set_if_not_empty(filter_params, 'available', False)
-        elif self.request.query_params.get('filter[available]') == 'true':
+        if self.request.query_params.get('filter[available]') == 'true':
             set_if_not_empty(filter_params, 'available', True)
 
         set_if_not_empty(filter_params, 'category', self.request.query_params.get('category'))
@@ -143,5 +139,5 @@ class SalesAPIView(ListAPIView):
 
 
 class BannersAPIView(ListAPIView):
-    queryset = Product.objects.all()
+    queryset = Product.objects.annotate(num_reviews=Count('reviews')).order_by('-num_reviews').order_by('-rating')[:3]
     serializer_class = CatalogItemSerializer

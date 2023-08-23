@@ -1,7 +1,7 @@
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
 from rest_framework import serializers
-
+from cart.utils import merge_carts
 from .models import Profile, Avatar
 
 
@@ -44,6 +44,7 @@ class UserRegisterSerializer(serializers.ModelSerializer):
             username=username,
             password=password,
         )
+        merge_carts(request=request, user=user)
         login(request, user=user)
         return new_user
 

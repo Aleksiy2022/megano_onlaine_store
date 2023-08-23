@@ -48,6 +48,8 @@ INSTALLED_APPS = [
 
     'api_auth.apps.ApiAuthConfig',
     'api_catalog.apps.ApiCatalogConfig',
+    'cart.apps.CartConfig',
+    'api_order.apps.ApiOrderConfig',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +137,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR / 'uploads')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CART_SESSION_ID = 'cart'

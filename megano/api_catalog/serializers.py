@@ -94,7 +94,8 @@ class ProductImageSerializer(serializers.ModelSerializer):
 
 class ProductDetailSerializer(TaggitSerializer, serializers.ModelSerializer):
 
-    tags = TagListSerializerField()
+    price = serializers.SerializerMethodField()
+    tags = TagSerializer(many=True)
     images = ProductImageSerializer(many=True)
     reviews = ProductReviewSerializer(many=True)
     specifications = ProductSpecificationsSerializer(many=True)
@@ -123,9 +124,17 @@ class ProductDetailSerializer(TaggitSerializer, serializers.ModelSerializer):
     def get_rating(self, obj):
         return ProductReview.objects.filter(product_id=obj.pk).aggregate(Avg('rate'))['rate__avg']
 
+    def get_price(self, obj):
+        if obj.discount:
+            return obj.salePrice
+        else:
+            return obj.price
+
 
 class CatalogItemSerializer(serializers.ModelSerializer):
 
+    price = serializers.SerializerMethodField()
+    count = serializers.SerializerMethodField()
     date = serializers.DateTimeField(format='%Y-%m-%d %H:%M')
     freeDelivery = serializers.BooleanField()
     images = ProductImageSerializer(many=True)
@@ -148,8 +157,21 @@ class CatalogItemSerializer(serializers.ModelSerializer):
             'tags',
             'reviews',
             'rating',
-
         )
+
+    def get_price(self, obj):
+        if obj.discount:
+            return obj.salePrice
+        else:
+            return obj.price
+
+    def get_count(self, obj):
+        counts = self.context.get('counts_products')
+        path = self.context.get('path')
+        if path == '/api/basket':
+            return counts[str(obj.pk)]
+        else:
+            return obj.count
 
     def get_reviews(self, obj):
         return ProductReview.objects.filter(product_id=obj.pk).count()
