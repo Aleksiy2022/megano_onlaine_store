@@ -4,6 +4,10 @@ from api_catalog.models import Product
 
 
 class Cart(models.Model):
+    """
+    Модель корзины.
+    """
+
     objects = models.Manager()
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='cart', blank=True, null=True)
@@ -32,6 +36,10 @@ class Cart(models.Model):
 
 
 class CartItem(models.Model):
+    """
+    Модель позиции в корзине.
+    """
+
     objects = models.Manager()
 
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='items')

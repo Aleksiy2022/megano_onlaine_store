@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'taggit',
     'phonenumber_field',
     'frontend',
+    'drf_spectacular',
 
     'api_auth.apps.ApiAuthConfig',
     'api_catalog.apps.ApiCatalogConfig',
@@ -138,3 +139,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR / 'uploads')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CART_SESSION_ID = 'cart'
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'MeganoAPI',
+    'DESCRIPTION': 'This is the documentation for megano project',
+    'VERSION': '1.0.0',
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}

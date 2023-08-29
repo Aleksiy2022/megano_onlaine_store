@@ -5,6 +5,10 @@ from api_catalog.models import Product
 
 
 class Order(models.Model):
+    """
+    Модель заказа.
+    """
+
     objects = models.Manager()
 
     user = models.ForeignKey(User, related_name='customer', on_delete=models.CASCADE, null=True, blank=True)
@@ -27,11 +31,17 @@ class Order(models.Model):
         indexes = [
             models.Index(fields=['-createdAt']),
         ]
+        verbose_name = 'Заказ'
+        verbose_name_plural = 'Заказы'
 
     def total_cost(self):
         return sum(item.get_cost() for item in self.items.all())
 
 class OrderItem(models.Model):
+    """
+    Модель позиций в заказе.
+    """
+
     objects = models.Manager()
 
     order = models.ForeignKey(Order, related_name='items', on_delete=models.CASCADE)

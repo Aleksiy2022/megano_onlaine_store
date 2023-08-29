@@ -93,3 +93,6 @@ class ChangeAvatarSerializer(serializers.ModelSerializer):
         fields = [
             'avatar',
         ]
+
+class EmptySerializer(serializers.Serializer):
+    pass

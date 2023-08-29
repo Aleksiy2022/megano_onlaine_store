@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from taggit.serializers import TaggitSerializer, TagListSerializerField
+from taggit.serializers import TaggitSerializer
 from .models import (
     Category,
     CategoryImage,
@@ -10,6 +10,8 @@ from .models import (
 )
 from taggit.models import Tag
 from django.db.models import Avg
+from drf_spectacular.types import OpenApiTypes
+from drf_spectacular.utils import extend_schema_field, extend_schema
 
 
 class CategoryImageSerializer(serializers.ModelSerializer):
@@ -34,18 +36,19 @@ class FilterCategoryListSerializer(serializers.ListSerializer):
 
 
 class CategorySerializer(serializers.ModelSerializer):
-    subcategories = RecursiveCategorySerializer(many=True)
     image = CategoryImageSerializer()
+    subcategories = RecursiveCategorySerializer(many=True)
 
     class Meta:
         list_serializer_class = FilterCategoryListSerializer
         model = Category
         fields = (
+            'subcategories',
             'id',
             'title',
             'image',
-            'subcategories',
         )
+
 
 
 class TagSerializer(serializers.ModelSerializer):
@@ -121,9 +124,12 @@ class ProductDetailSerializer(TaggitSerializer, serializers.ModelSerializer):
             'rating',
         )
 
+
+    @extend_schema_field(OpenApiTypes.STR)
     def get_rating(self, obj):
         return ProductReview.objects.filter(product_id=obj.pk).aggregate(Avg('rate'))['rate__avg']
 
+    @extend_schema_field(OpenApiTypes.STR)
     def get_price(self, obj):
         if obj.discount:
             return obj.salePrice
@@ -159,12 +165,14 @@ class CatalogItemSerializer(serializers.ModelSerializer):
             'rating',
         )
 
+    @extend_schema_field(OpenApiTypes.STR)
     def get_price(self, obj):
         if obj.discount:
             return obj.salePrice
         else:
             return obj.price
 
+    @extend_schema_field(OpenApiTypes.STR)
     def get_count(self, obj):
         counts = self.context.get('counts_products')
         path = self.context.get('path')
@@ -173,9 +181,11 @@ class CatalogItemSerializer(serializers.ModelSerializer):
         else:
             return obj.count
 
+    @extend_schema_field(OpenApiTypes.STR)
     def get_reviews(self, obj):
         return ProductReview.objects.filter(product_id=obj.pk).count()
 
+    @extend_schema_field(OpenApiTypes.STR)
     def get_rating(self, obj):
         return ProductReview.objects.filter(product_id=obj.pk).aggregate(Avg('rate'))['rate__avg']
 

@@ -4,6 +4,10 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Profile(models.Model):
+    """
+    Расширение модели User.
+    """
+
     objects = models.Manager()
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='user')
@@ -21,6 +25,10 @@ def user_avatar_directory_path(instance: "Avatar", filename: str) -> str:
 
 
 class Avatar(models.Model):
+    """
+    Модель для хранения Аватара пользователя.
+    """
+
     objects = models.Manager()
 
     user = models.OneToOneField(

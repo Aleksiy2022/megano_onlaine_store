@@ -1,6 +1,8 @@
 from django.db.models import Count
+from drf_spectacular.utils import extend_schema
 from rest_framework.generics import ListAPIView
 from rest_framework import status
+from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from taggit.models import Tag
@@ -11,41 +13,54 @@ from .models import (
     ProductReview
 )
 from .pagination import MyPaginationClass
-from .serializers import (
-    CategorySerializer,
-    TagSerializer,
-    ProductDetailSerializer,
-    ProductReviewSerializer,
-    CatalogItemSerializer, SaleSerializer,
-)
+from . import serializers
+from django.db.models.query import QuerySet
 
+
+@extend_schema(tags=['Catalog'])
 class CategoryListAPIView(ListAPIView):
+    """
+    Отобразить список категорий магазина.
+    """
+
     queryset = Category.objects.select_related('image').all()
-    serializer_class = CategorySerializer
+    serializer_class = serializers.CategorySerializer
     pagination_class = None
 
 
-class TagListAPIView(ListAPIView):
-    queryset = Tag.objects.all()
-    serializer_class = TagSerializer
-    pagination_class = None
-
-
+@extend_schema(tags=['Product'])
 class ProductDetailAPIViews(APIView):
-    def get(self, request, pk):
+    """
+    Отобразить детальные данные по продукту.
+    """
+    serializer_class = serializers.ProductDetailSerializer
+
+    def get(self, request: Request, pk: int) -> Response:
         product = Product.objects.get(pk=pk)
-        serializer = ProductDetailSerializer(product)
+        serializer = serializers.ProductDetailSerializer(product)
         return Response(serializer.data)
 
 
-class ProductReviewCreateAPIView(APIView):
-    def get(self, request, pk):
+@extend_schema(tags=['Review'])
+class ProductReviewAPIView(APIView):
+
+    serializer_class = serializers.ProductReviewSerializer
+
+    def get(self, request: Request, pk: int) -> Response:
+        """
+        Получить детали отзыва.
+        """
+
         product_reviews = ProductReview.objects.filter(product_id=pk)
-        serializer = ProductReviewSerializer(product_reviews, many=True)
+        serializer = serializers.ProductReviewSerializer(product_reviews, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-    def post(self, request, pk):
+    def post(self, request: Request, pk: int) -> Response:
+        """
+        Публикация отзыва.
+        """
+
         data = request.data
         author = data.get('author')
         email = data.get('email')
@@ -62,16 +77,21 @@ class ProductReviewCreateAPIView(APIView):
             product_id=pk,
         )
         new_review.save()
-        serializer = ProductReviewSerializer(new_review)
+        serializer = serializers.ProductReviewSerializer(new_review)
         return Response(serializer.data)
 
 
+@extend_schema(tags=['Catalog'])
 class CatalogAPIView(ListAPIView):
-    serializer_class = CatalogItemSerializer
+    """
+    Отобразить список товаров отфильтрованных по переданным параметрам в запросе.
+    """
+    serializer_class = serializers.CatalogItemSerializer
     pagination_class = MyPaginationClass
 
-    def get_queryset(self):
-        filter_params = {}
+    def get_queryset(self) -> QuerySet:
+
+        filter_params: dict = {}
         set_if_not_empty(filter_params, 'name', self.request.query_params.get('filter[name]'))
         set_if_not_empty(filter_params, 'price__gt', self.request.query_params.get('filter[minPrice]'))
         set_if_not_empty(filter_params, 'price__lte', self.request.query_params.get('filter[maxPrice]'))
@@ -118,26 +138,58 @@ class CatalogAPIView(ListAPIView):
             return Product.objects.filter(**filter_params).order_by(sort)[:int(limit)]
 
 
+@extend_schema(tags=['Product'])
 class PopularProductsAPIView(ListAPIView):
-    serializer_class = CatalogItemSerializer
+    """
+    Отобразить популярные продукты.
+    """
 
-    def get_queryset(self):
-        queryset = Product.objects.order_by('rating').annotate(num_reviews=Count('reviews')).order_by('-num_reviews')
+    serializer_class = serializers.CatalogItemSerializer
+
+    def get_queryset(self) -> QuerySet:
+        queryset = Product.objects.order_by('rating').annotate(num_reviews=Count('reviews')).order_by('-num_reviews')[:4]
         return queryset
 
+
+@extend_schema(tags=['Product'])
 class LimitedProductAPIView(ListAPIView):
-    serializer_class = CatalogItemSerializer
+    """
+    Отобразить список продуктов с маленьким остатком.
+    """
 
-    def get_queryset(self):
-        return Product.objects.filter(count__lte=10).order_by('rating')
+    serializer_class = serializers.CatalogItemSerializer
+
+    def get_queryset(self) -> QuerySet:
+        return Product.objects.filter(count__lte=10).order_by('rating')[:4]
 
 
+@extend_schema(tags=['Catalog'])
 class SalesAPIView(ListAPIView):
+    """
+    Отобразить товары участвующие в акции.
+    """
+
     queryset = Product.objects.filter(discount=True)
-    serializer_class = SaleSerializer
+    serializer_class = serializers.SaleSerializer
     pagination_class = MyPaginationClass
 
 
+@extend_schema(tags=['Catalog'])
 class BannersAPIView(ListAPIView):
+    """
+    Отобразить самые популярные товары с наибольшим числом отзывов и лучшим рейтингом.
+    """
+
     queryset = Product.objects.annotate(num_reviews=Count('reviews')).order_by('-num_reviews').order_by('-rating')[:3]
-    serializer_class = CatalogItemSerializer
+    serializer_class = serializers.CatalogItemSerializer
+
+
+@extend_schema(tags=['Tag'])
+class TagListAPIView(ListAPIView):
+    """
+    Отобразить список тегов.
+    """
+
+    queryset = Tag.objects.all()
+    serializer_class = serializers.TagSerializer
+    pagination_class = None

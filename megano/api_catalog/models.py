@@ -4,6 +4,10 @@ from taggit.managers import TaggableManager
 
 
 class Category(models.Model):
+    """
+    Модель Категории товаров.
+    """
+
     objects = models.Manager()
 
     title = models.CharField(max_length=100)
@@ -16,13 +20,20 @@ class Category(models.Model):
     )
 
     class Meta:
-        verbose_name_plural = 'Categories'
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
 
     def __str__(self):
         return self.title
 
 
 def category_image_directory_path(instance: "CategoryImage", filename: str) -> str:
+    """
+    :param instance: CategoryImage
+    :param filename: str
+    :return: str, путь для получения изображения категории
+    """
+
     return "categories/category_{pk}/img/{filename}".format(
         pk=instance.category.pk,
         filename=filename
@@ -30,6 +41,10 @@ def category_image_directory_path(instance: "CategoryImage", filename: str) -> s
 
 
 class CategoryImage(models.Model):
+    """
+    Модель для хранения изображения категории.
+    """
+
     objects = models.Manager()
 
     src = models.ImageField(upload_to=category_image_directory_path)
@@ -42,6 +57,10 @@ class CategoryImage(models.Model):
 
 
 class Product(models.Model):
+    """
+    Модель товара.
+    """
+
     objects = models.Manager()
 
     category = models.ForeignKey(Category, related_name='category', on_delete=models.CASCADE)
@@ -63,12 +82,20 @@ class Product(models.Model):
 
     class Meta:
         ordering = ['id']
+        verbose_name = 'Товар'
+        verbose_name_plural = 'Товары'
 
     def __str__(self):
         return self.title
 
 
 def product_image_directory_path(instance: "ProductImage", filename: str) -> str:
+    """
+    :param instance: ProductImage
+    :param filename: str
+    :return: str, путь для получения изображений товаров
+    """
+
     return 'products/product_{id}/img/{filename}'.format(
         id=instance.product.pk,
         filename=filename
@@ -76,6 +103,10 @@ def product_image_directory_path(instance: "ProductImage", filename: str) -> str
 
 
 class ProductImage(models.Model):
+    """
+    Модель для хранения изображения товаров.
+    """
+
     objects = models.Manager()
 
     src = models.ImageField(upload_to=product_image_directory_path)
@@ -88,6 +119,10 @@ class ProductImage(models.Model):
 
 
 class ProductReview(models.Model):
+    """
+    Модель отзыва.
+    """
+
     objects = models.Manager()
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews')
@@ -100,6 +135,10 @@ class ProductReview(models.Model):
 
 
 class ProductSpecifications(models.Model):
+    """
+    Модель характеристик товара.
+    """
+
     objects = models.Manager()
 
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='specifications')
