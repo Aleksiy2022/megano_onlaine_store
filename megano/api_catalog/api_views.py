@@ -23,7 +23,7 @@ class CategoryListAPIView(ListAPIView):
     Отобразить список категорий магазина.
     """
 
-    queryset = Category.objects.select_related('image').all()
+    queryset = Category.objects.select_related('image').filter(categories_id=None).all()
     serializer_class = serializers.CategorySerializer
     pagination_class = None
 

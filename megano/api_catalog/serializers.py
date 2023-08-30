@@ -11,7 +11,7 @@ from .models import (
 from taggit.models import Tag
 from django.db.models import Avg
 from drf_spectacular.types import OpenApiTypes
-from drf_spectacular.utils import extend_schema_field, extend_schema
+from drf_spectacular.utils import extend_schema_field
 
 
 class CategoryImageSerializer(serializers.ModelSerializer):
@@ -22,33 +22,36 @@ class CategoryImageSerializer(serializers.ModelSerializer):
             'alt',
         )
 
-
-class RecursiveCategorySerializer(serializers.Serializer):
-    def to_representation(self, instance):
-        serialized = self.parent.parent.__class__(instance, context=self.context)
-        return serialized.data
-
-
-class FilterCategoryListSerializer(serializers.ListSerializer):
-    def to_representation(self, data):
-        data = data.filter(categories=None)
-        return super().to_representation(data)
+# class RecursiveCategorySerializer(serializers.Serializer):
+#     def to_representation(self, instance):
+#         serialized = self.parent.parent.__class__(instance, context=self.context)
+#         return serialized.data
+#
+#
+# class FilterCategoryListSerializer(serializers.ListSerializer):
+#     def to_representation(self, data):
+#         data = data.filter(categories=None)
+#         return super().to_representation(data)
 
 
 class CategorySerializer(serializers.ModelSerializer):
     image = CategoryImageSerializer()
-    subcategories = RecursiveCategorySerializer(many=True)
+    # subcategories = RecursiveCategorySerializer(many=True)
 
     class Meta:
-        list_serializer_class = FilterCategoryListSerializer
+        # list_serializer_class = FilterCategoryListSerializer
         model = Category
         fields = (
-            'subcategories',
             'id',
             'title',
             'image',
         )
 
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        subcategories_data = self.__class__(instance.subcategories.all(), many=True).data
+        data['subcategories'] = subcategories_data
+        return data
 
 
 class TagSerializer(serializers.ModelSerializer):
