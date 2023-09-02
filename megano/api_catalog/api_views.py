@@ -1,5 +1,5 @@
 from django.db.models import Count
-from drf_spectacular.utils import extend_schema
+from drf_spectacular.utils import extend_schema, OpenApiExample
 from rest_framework.generics import ListAPIView
 from rest_framework import status
 from rest_framework.request import Request

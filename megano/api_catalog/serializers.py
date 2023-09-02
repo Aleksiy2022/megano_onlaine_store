@@ -11,7 +11,7 @@ from .models import (
 from taggit.models import Tag
 from django.db.models import Avg
 from drf_spectacular.types import OpenApiTypes
-from drf_spectacular.utils import extend_schema_field
+from drf_spectacular.utils import extend_schema_field, extend_schema_serializer, OpenApiExample
 
 
 class CategoryImageSerializer(serializers.ModelSerializer):
@@ -22,35 +22,47 @@ class CategoryImageSerializer(serializers.ModelSerializer):
             'alt',
         )
 
-# class RecursiveCategorySerializer(serializers.Serializer):
-#     def to_representation(self, instance):
-#         serialized = self.parent.parent.__class__(instance, context=self.context)
-#         return serialized.data
-#
-#
-# class FilterCategoryListSerializer(serializers.ListSerializer):
-#     def to_representation(self, data):
-#         data = data.filter(categories=None)
-#         return super().to_representation(data)
 
-
+@extend_schema_serializer(
+    examples = [
+         OpenApiExample(
+            'Category',
+            value={
+                'id': 1,
+                'title': 'Компьютеры',
+                'image': {
+                    'src': '/3.png',
+                    'alt': 'Image alt string'
+                 },
+                'subcategories': {
+                    'id': 8,
+                    'title': 'Мониторы',
+                    'image': {
+                        'src': '/3.png',
+                        'alt': 'Image alt string'
+                    },
+                    }
+            },
+        ),
+    ]
+)
 class CategorySerializer(serializers.ModelSerializer):
     image = CategoryImageSerializer()
-    # subcategories = RecursiveCategorySerializer(many=True)
 
     class Meta:
-        # list_serializer_class = FilterCategoryListSerializer
         model = Category
         fields = (
             'id',
             'title',
             'image',
+            'subcategories',
         )
 
     def to_representation(self, instance):
         data = super().to_representation(instance)
         subcategories_data = self.__class__(instance.subcategories.all(), many=True).data
         data['subcategories'] = subcategories_data
+        print(data)
         return data
 
 
