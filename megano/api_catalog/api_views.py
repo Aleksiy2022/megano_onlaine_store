@@ -1,5 +1,5 @@
 from django.db.models import Count
-from drf_spectacular.utils import extend_schema, OpenApiExample
+from drf_spectacular.utils import extend_schema
 from rest_framework.generics import ListAPIView
 from rest_framework import status
 from rest_framework.request import Request
@@ -23,7 +23,7 @@ class CategoryListAPIView(ListAPIView):
     Отобразить список категорий магазина.
     """
 
-    queryset = Category.objects.select_related('image').filter(categories_id=None).all()
+    queryset = Category.objects.filter(categories_id=None).all()
     serializer_class = serializers.CategorySerializer
     pagination_class = None
 
@@ -77,6 +77,11 @@ class ProductReviewAPIView(APIView):
             product_id=pk,
         )
         new_review.save()
+        product = Product.objects.get(id=pk)
+        product_reviews = product.reviews.all()
+        count_reviews = len(product_reviews)
+        product.rating = sum(review.rate for review in product_reviews)/count_reviews
+        product.save()
         serializer = serializers.ProductReviewSerializer(new_review)
         return Response(serializer.data)
 
@@ -114,28 +119,47 @@ class CatalogAPIView(ListAPIView):
 
         if sort_type == 'inc':
             if sort == 'reviews':
-                return (
+                products = (
                     Product.objects.
+                    prefetch_related('images').
+                    prefetch_related('tags').
                     annotate(num_reviews=Count('reviews')).
                     filter(**filter_params).
                     order_by('-num_reviews')[:int(limit)]
                 )
+                return products
             else:
                 sort = '-' + self.request.query_params.get('sort')
         else:
             if sort == 'reviews':
-                return (
+                products = (
                     Product.objects.
+                    prefetch_related('images').
+                    prefetch_related('tags').
                     annotate(num_reviews=Count('reviews')).
                     filter(**filter_params).
                     order_by('num_reviews')[:int(limit)]
                 )
+                return products
             sort = self.request.query_params.get('sort')
 
         if len(filter_params) == 0:
-            return Product.objects.all()
+            products =  (
+                Product.objects.
+                prefetch_related('images').
+                prefetch_related('tags').
+                all()
+            )
+            return products
         else:
-            return Product.objects.filter(**filter_params).order_by(sort)[:int(limit)]
+            products = (
+                Product.objects.
+                prefetch_related('images').
+                prefetch_related('tags').
+                filter(**filter_params).
+                order_by(sort)[:int(limit)]
+            )
+            return products
 
 
 @extend_schema(tags=['Product'])
@@ -147,7 +171,13 @@ class PopularProductsAPIView(ListAPIView):
     serializer_class = serializers.CatalogItemSerializer
 
     def get_queryset(self) -> QuerySet:
-        queryset = Product.objects.order_by('rating').annotate(num_reviews=Count('reviews')).order_by('-num_reviews')[:4]
+        queryset = (
+            Product.objects.
+            prefetch_related('images').
+            order_by('rating').
+            annotate(num_reviews=Count('reviews')).
+            order_by('-num_reviews')[:4]
+        )
         return queryset
 
 
@@ -169,7 +199,11 @@ class SalesAPIView(ListAPIView):
     Отобразить товары участвующие в акции.
     """
 
-    queryset = Product.objects.filter(discount=True)
+    queryset = (
+        Product.objects.
+        prefetch_related("images").
+        filter(discount=True)
+    )
     serializer_class = serializers.SaleSerializer
     pagination_class = MyPaginationClass
 
@@ -180,7 +214,12 @@ class BannersAPIView(ListAPIView):
     Отобразить самые популярные товары с наибольшим числом отзывов и лучшим рейтингом.
     """
 
-    queryset = Product.objects.annotate(num_reviews=Count('reviews')).order_by('-num_reviews').order_by('-rating')[:3]
+    queryset = (
+        Product.objects.
+        annotate(num_reviews=Count('reviews')).
+        order_by('-num_reviews').
+        order_by('-rating')[:3]
+    )
     serializer_class = serializers.CatalogItemSerializer
 
 

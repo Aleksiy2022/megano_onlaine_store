@@ -1,5 +1,4 @@
 import json
-from django.contrib.auth.models import User
 from cart.utils import merge_carts
 from .models import Profile, Avatar
 from django.contrib.auth import login, logout, authenticate
@@ -79,7 +78,7 @@ class ProfileAPIView(APIView):
     serializer_class = ProfileSerializer
 
     def get(self, request: Request) -> Response:
-        user = Profile.objects.get(user_id=request.user.pk)
+        user = Profile.objects.select_related('avatar').get(user_id=request.user.pk)
         serializer = ProfileSerializer(user)
         return Response(serializer.data)
 
@@ -93,7 +92,6 @@ class ProfileAPIView(APIView):
             phone=phone,
             second_email=email,
         )
-        print(request.user)
         user_profile = Profile.objects.get(user_id=request.user.pk)
         serializer = ProfileSerializer(user_profile)
         return Response(serializer.data)
@@ -111,8 +109,8 @@ class PasswordChangeAPIView(APIView):
         data = request.data
         current_password = data.get('currentPassword')
         new_password = data.get('newPassword')
-        user = User.objects.get(pk=request.user.pk)
-        username = request.user.username
+        user = request.user
+        username = user.username
         if user.check_password(current_password):
             user.set_password(new_password)
             user.save()

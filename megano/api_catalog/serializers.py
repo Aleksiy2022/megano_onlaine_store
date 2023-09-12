@@ -9,7 +9,6 @@ from .models import (
     ProductSpecifications
 )
 from taggit.models import Tag
-from django.db.models import Avg
 from drf_spectacular.types import OpenApiTypes
 from drf_spectacular.utils import extend_schema_field, extend_schema_serializer, OpenApiExample
 
@@ -24,7 +23,7 @@ class CategoryImageSerializer(serializers.ModelSerializer):
 
 
 @extend_schema_serializer(
-    examples = [
+    examples=[
          OpenApiExample(
             'Category',
             value={
@@ -62,7 +61,6 @@ class CategorySerializer(serializers.ModelSerializer):
         data = super().to_representation(instance)
         subcategories_data = self.__class__(instance.subcategories.all(), many=True).data
         data['subcategories'] = subcategories_data
-        print(data)
         return data
 
 
@@ -117,7 +115,6 @@ class ProductDetailSerializer(TaggitSerializer, serializers.ModelSerializer):
     images = ProductImageSerializer(many=True)
     reviews = ProductReviewSerializer(many=True)
     specifications = ProductSpecificationsSerializer(many=True)
-    rating = serializers.SerializerMethodField()
     date = serializers.DateTimeField(format='%Y-%m-%d %H:%M')
 
     class Meta:
@@ -139,11 +136,6 @@ class ProductDetailSerializer(TaggitSerializer, serializers.ModelSerializer):
             'rating',
         )
 
-
-    @extend_schema_field(OpenApiTypes.STR)
-    def get_rating(self, obj):
-        return ProductReview.objects.filter(product_id=obj.pk).aggregate(Avg('rate'))['rate__avg']
-
     @extend_schema_field(OpenApiTypes.STR)
     def get_price(self, obj):
         if obj.discount:
@@ -159,9 +151,8 @@ class CatalogItemSerializer(serializers.ModelSerializer):
     date = serializers.DateTimeField(format='%Y-%m-%d %H:%M')
     freeDelivery = serializers.BooleanField()
     images = ProductImageSerializer(many=True)
-    tags = TagSerializer(many=True)
-    reviews = serializers.SerializerMethodField()
-    rating = serializers.SerializerMethodField()
+    tags = serializers.SerializerMethodField()
+    reviews = serializers.CharField(source='reviews_count')
 
     class Meta:
         model = Product
@@ -197,12 +188,13 @@ class CatalogItemSerializer(serializers.ModelSerializer):
             return obj.count
 
     @extend_schema_field(OpenApiTypes.STR)
-    def get_reviews(self, obj):
-        return ProductReview.objects.filter(product_id=obj.pk).count()
-
-    @extend_schema_field(OpenApiTypes.STR)
-    def get_rating(self, obj):
-        return ProductReview.objects.filter(product_id=obj.pk).aggregate(Avg('rate'))['rate__avg']
+    def get_tags(self, obj):
+        path = self.context.get('path')
+        if path == '/api/basket':
+            return None
+        tags = obj.tags.all()
+        serializer = TagSerializer(tags, many=True)
+        return serializer.data
 
 
 class SaleSerializer(serializers.ModelSerializer):

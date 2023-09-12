@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-15tsiiv1_%gz!e7)$45%4r*v9yjs0!3^ajb0x3i@%h(j$j&c$u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "0.0.0.0",
+    "127.0.0.1"
+]
 
 
 # Application definition
@@ -46,6 +49,7 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'frontend',
     'drf_spectacular',
+    'debug_toolbar',
 
     'api_auth.apps.ApiAuthConfig',
     'api_catalog.apps.ApiCatalogConfig',
@@ -55,6 +59,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -138,7 +143,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR / 'uploads')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CART_SESSION_ID = 'cart'
 
 SPECTACULAR_SETTINGS = {
     'TITLE': 'MeganoAPI',
@@ -149,3 +153,9 @@ SPECTACULAR_SETTINGS = {
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

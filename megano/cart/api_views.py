@@ -68,7 +68,7 @@ class CartAPIView(APIView):
         path = self.request.path
         products = cart.items.all()
         counts_products = {str(product.product_id): str(product.count) for product in products}
-        products = Product.objects.filter(id__in=counts_products.keys())
+        products = Product.objects.prefetch_related("images").filter(id__in=counts_products.keys())
         serializer = CatalogItemSerializer(
             products,
             context={

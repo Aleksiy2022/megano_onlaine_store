@@ -74,6 +74,7 @@ class Product(models.Model):
     freeDelivery = models.BooleanField(default=True)
     tags = TaggableManager()
     rating = models.DecimalField(max_digits=5, decimal_places=2, default=0)
+    reviews_count = models.PositiveIntegerField(default=0)
     salePrice = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     dateFrom = models.DateTimeField(blank=True, null=True)
     dateTo = models.DateTimeField(blank=True, null=True)

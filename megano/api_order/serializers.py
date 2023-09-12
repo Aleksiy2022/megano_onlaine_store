@@ -1,8 +1,6 @@
-from django.db.models import Avg
 from rest_framework import serializers
 from drf_spectacular.types import OpenApiTypes
 from drf_spectacular.utils import extend_schema_field
-from api_catalog.models import ProductReview
 from api_catalog.serializers import ProductImageSerializer, TagSerializer
 from api_order.models import Order, OrderItem
 
@@ -19,8 +17,8 @@ class OrderItemSerializer(serializers.ModelSerializer):
     freeDelivery = serializers.CharField(source='product.freeDelivery')
     images = ProductImageSerializer(source='product.images', many=True)
     tags = TagSerializer(source='product.tags', many=True)
-    reviews = serializers.SerializerMethodField()
-    rating = serializers.SerializerMethodField()
+    reviews = serializers.CharField(source='product.reviews_count')
+    rating = serializers.CharField(source='product.rating')
 
     class Meta:
         model = OrderItem
@@ -46,13 +44,6 @@ class OrderItemSerializer(serializers.ModelSerializer):
         else:
             return obj.product.price
 
-    @extend_schema_field(OpenApiTypes.STR)
-    def get_reviews(self, obj):
-        return ProductReview.objects.filter(product_id=obj.product.pk).count()
-
-    @extend_schema_field(OpenApiTypes.STR)
-    def get_rating(self, obj):
-        return ProductReview.objects.filter(product_id=obj.product.pk).aggregate(Avg('rate'))['rate__avg']
 
 class OrderSerializer(serializers.ModelSerializer):
 
