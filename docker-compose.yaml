@@ -1,0 +1,57 @@
+version: "2.18.1"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - ./rabbitmq_data:/var/lib/rabbitmq
+
+  megano:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sh -c "python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./megano:/megano
+    depends_on:
+      - rabbitmq
+    environment:
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672
+      - EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+  celery:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: celery -A megano worker --loglevel=info
+    depends_on:
+      - rabbitmq
+    environment:
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672
+      - EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    volumes:
+      - ./megano:/megano
+
+  flower:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5555:5555"
+    depends_on:
+      - celery
+    environment:
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672
+      - EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    command:
+      - celery
+      - -A
+      - megano
+      - flower
+    volumes:
+      - ./megano:/megano

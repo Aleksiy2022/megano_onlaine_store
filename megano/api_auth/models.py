@@ -16,6 +16,10 @@ class Profile(models.Model):
     second_email = models.EmailField(unique=True, null=True)
     balance = models.BigIntegerField(blank=True, null=True)
 
+    class Meta:
+        verbose_name = 'Профиль пользоввателя'
+        verbose_name_plural = 'Профили пользователей'
+
 
 def user_avatar_directory_path(instance: "Avatar", filename: str) -> str:
     return 'users/user_{pk}/avatar/{filename}'.format(

@@ -4,10 +4,10 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from drf_spectacular.utils import extend_schema
 from api_auth.serializers import EmptySerializer
-from api_catalog.models import Product
-from api_order.models import Order, OrderItem
+from api_order.models import Order
 from api_order.serializers import OrderSerializer
 from .payment_system import payment_order
+from .tasks import create_order, update_order, order_payment_confirmation
 
 
 @extend_schema(tags=['Order'])
@@ -29,37 +29,21 @@ class OrderAPIView(APIView):
         """
         Создать новый заказ
         """
-
         data = request.data
         if request.user.is_authenticated:
+            print('************************************8')
+            print('Сохдание заказа для аутентифицированного польхователя')
             user = request.user
+            order = Order.objects.create(user_id=user.pk)
         else:
-            user = None
-
-        if user:
-            order = Order.objects.create(
-                user_id=user.pk,
-            )
-        else:
+            print('************************************8')
+            print('Сохдание заказа для неаутентифицированного польхователя')
+            request.session.create()
             session_key = request.session.session_key
-            if session_key is None:
-                request.session.create()
-                session_key = request.session.session_key
-                order = Order.objects.create(
-                    session_key=session_key
-                )
-            else:
-                order = Order.objects.create(
-                    session_key=session_key
-                )
+            order = Order.objects.create(session_key=session_key)
 
-        for product in data:
-            OrderItem.objects.create(
-                order=order,
-                product=Product.objects.filter(id=product['id']).first(),
-                price=product['price'],
-                count=product['count']
-            )
+        create_order.delay(request_data=data, order_id=order.pk)
+
         return Response({"orderId": order.pk})
 
 
@@ -83,27 +67,8 @@ class OrderItemsAPIViews(APIView):
         Обновление данных заказа.
         """
 
-        data = request.data
-        total_order_cost = float(data['totalCost'])
-        order_id = str(pk)
-        delivery_type = data['deliveryType']
-        if delivery_type == 'express':
-            total_order_cost += 500
-        else:
-            if total_order_cost < 2000:
-                total_order_cost += 200
-        Order.objects.filter(id=order_id).update(
-            fullName=data['fullName'],
-            email=data['email'],
-            phone=data['phone'],
-            deliveryType=delivery_type,
-            total_order_cost=total_order_cost,
-            paymentType=data['paymentType'],
-            status=data['status'],
-            city = data['city'],
-            address = data['address'],
-        )
-        return Response({"orderId": order_id})
+        update_order.delay(order_id=str(pk), request_data=request.data, user_id=request.user.pk)
+        return Response({"orderId": pk})
 
 
 @extend_schema(tags=['Payment'])
@@ -125,6 +90,8 @@ class PaymentAPIView(APIView):
             code_cvv=data['code']
         )
         if payment_status:
+            user_id=request.user.pk
+            order_payment_confirmation.delay(order_id=pk, user_id=user_id)
             return Response(status=status.HTTP_200_OK)
         else:
             return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)

@@ -82,7 +82,8 @@ class ProductReviewAPIView(APIView):
         count_reviews = len(product_reviews)
         product.rating = sum(review.rate for review in product_reviews)/count_reviews
         product.save()
-        serializer = serializers.ProductReviewSerializer(new_review)
+        reviews = ProductReview.objects.filter(product_id=pk)
+        serializer = serializers.ProductReviewSerializer(reviews, many=True)
         return Response(serializer.data)
 
 
@@ -125,6 +126,7 @@ class CatalogAPIView(ListAPIView):
                     prefetch_related('tags').
                     annotate(num_reviews=Count('reviews')).
                     filter(**filter_params).
+                    distinct().
                     order_by('-num_reviews')[:int(limit)]
                 )
                 return products
@@ -138,6 +140,7 @@ class CatalogAPIView(ListAPIView):
                     prefetch_related('tags').
                     annotate(num_reviews=Count('reviews')).
                     filter(**filter_params).
+                    distinct().
                     order_by('num_reviews')[:int(limit)]
                 )
                 return products
@@ -157,6 +160,7 @@ class CatalogAPIView(ListAPIView):
                 prefetch_related('images').
                 prefetch_related('tags').
                 filter(**filter_params).
+                distinct().
                 order_by(sort)[:int(limit)]
             )
             return products

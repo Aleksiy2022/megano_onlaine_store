@@ -55,6 +55,10 @@ class CategoryImage(models.Model):
         related_name='image',
     )
 
+    class Meta:
+        verbose_name = 'Изображение категории'
+        verbose_name_plural = 'Изображения категори'
+
 
 class Product(models.Model):
     """
@@ -118,6 +122,10 @@ class ProductImage(models.Model):
         related_name='images'
     )
 
+    class Meta:
+        verbose_name = 'Изображение товара'
+        verbose_name_plural = 'Изоюражения товара'
+
 
 class ProductReview(models.Model):
     """
@@ -134,6 +142,10 @@ class ProductReview(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='reviews')
 
+    class Meta:
+        verbose_name = 'Отзыв на товар'
+        verbose_name_plural = 'Отзывы на товары'
+
 
 class ProductSpecifications(models.Model):
     """
@@ -148,4 +160,8 @@ class ProductSpecifications(models.Model):
 
     def __str__(self):
         return f'{self.product}'
+
+    class Meta:
+        verbose_name = 'Характеристики продукта'
+        verbose_name_plural = 'Характеристики продуктов'
 
