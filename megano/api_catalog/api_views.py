@@ -92,15 +92,15 @@ class CatalogAPIView(ListAPIView):
     """
     Отобразить список товаров отфильтрованных по переданным параметрам в запросе.
     """
+
     serializer_class = serializers.CatalogItemSerializer
     pagination_class = MyPaginationClass
 
     def get_queryset(self) -> QuerySet:
-
         filter_params: dict = {}
         set_if_not_empty(filter_params, 'name', self.request.query_params.get('filter[name]'))
-        set_if_not_empty(filter_params, 'price__gt', self.request.query_params.get('filter[minPrice]'))
-        set_if_not_empty(filter_params, 'price__lte', self.request.query_params.get('filter[maxPrice]'))
+        set_if_not_empty(filter_params, 'current_price__gt', self.request.query_params.get('filter[minPrice]'))
+        set_if_not_empty(filter_params, 'current_price__lte', self.request.query_params.get('filter[maxPrice]'))
 
         if self.request.query_params.get('filter[freeDelivery]') == 'true':
             set_if_not_empty(filter_params, 'freeDelivery', True)
@@ -111,7 +111,7 @@ class CatalogAPIView(ListAPIView):
         set_if_not_empty(filter_params, 'category', self.request.query_params.get('category'))
         tags = [int(tag) for tag in self.request.query_params.getlist('tags[]')]
 
-        if len(tags) != 0:
+        if tags:
             set_if_not_empty(filter_params, 'tags__id__in', tags)
 
         limit = self.request.query_params.get('limit')
@@ -131,7 +131,10 @@ class CatalogAPIView(ListAPIView):
                 )
                 return products
             else:
-                sort = '-' + self.request.query_params.get('sort')
+                if sort == 'price':
+                    sort = '-current_price'
+                else:
+                    sort = '-' + self.request.query_params.get('sort')
         else:
             if sort == 'reviews':
                 products = (
@@ -144,9 +147,12 @@ class CatalogAPIView(ListAPIView):
                     order_by('num_reviews')[:int(limit)]
                 )
                 return products
-            sort = self.request.query_params.get('sort')
+            if sort == 'price':
+                sort = 'current_price'
+            else:
+                sort = self.request.query_params.get('sort')
 
-        if len(filter_params) == 0:
+        if not filter_params:
             products =  (
                 Product.objects.
                 prefetch_related('images').

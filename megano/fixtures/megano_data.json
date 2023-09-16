@@ -2405,6 +2405,97 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 186,
+  "fields": {
+    "action_time": "2023-09-16T13:20:08.501Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "Монитор",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 187,
+  "fields": {
+    "action_time": "2023-09-16T13:20:54.622Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "IPhone 14",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 188,
+  "fields": {
+    "action_time": "2023-09-16T13:21:04.420Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "3",
+    "object_repr": "Новый монитор",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 189,
+  "fields": {
+    "action_time": "2023-09-16T13:21:16.156Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "4",
+    "object_repr": "Смарт-часы Apple Watch Series 8 45мм Aluminium M/L сияющая звезда",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 190,
+  "fields": {
+    "action_time": "2023-09-16T13:21:23.159Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "5",
+    "object_repr": "Макбук AIR PRO",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 191,
+  "fields": {
+    "action_time": "2023-09-16T13:25:35.805Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "Монитор",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"SalePrice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 192,
+  "fields": {
+    "action_time": "2023-09-16T13:31:45.408Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "Монитор",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"SalePrice\"]}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -3237,7 +3328,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$600000$Nf5LqZpF3iuyUIBW05dqIF$TDosFD624bdeOdzOGCltGjSPEQU/NFT97G8LVjHUKGo=",
-    "last_login": "2023-09-15T18:03:10.602Z",
+    "last_login": "2023-09-16T13:17:36.920Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "",
@@ -3252,10 +3343,10 @@
 },
 {
   "model": "auth.user",
-  "pk": 9,
+  "pk": 10,
   "fields": {
-    "password": "pbkdf2_sha256$600000$9tIxBTmg2FYq2By3I4yHg7$UdE4jumpSU6UA01nRTJXmDSig+vUcXCuf6dQ1Mi/H3A=",
-    "last_login": "2023-09-15T18:03:56.831Z",
+    "password": "pbkdf2_sha256$600000$UhTdkVUEI5aC18bloXTUvz$8bXbOmT1cBbZeXrlsCB2xGwHREpOnAsv3BV+kldon50=",
+    "last_login": "2023-09-16T19:28:49.455Z",
     "is_superuser": false,
     "username": "Aleksey",
     "first_name": "Aleksey",
@@ -3263,7 +3354,25 @@
     "email": "",
     "is_staff": false,
     "is_active": true,
-    "date_joined": "2023-09-15T17:19:17.226Z",
+    "date_joined": "2023-09-16T19:09:47.465Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$GtOi9izpAT6Pgfv0hlNWs1$dcYOfjWK6yPnjswJSPlQRFU6r7YGmtIvQvS6Sq2Bc/I=",
+    "last_login": "2023-09-16T19:31:22.588Z",
+    "is_superuser": false,
+    "username": "Aleksandr",
+    "first_name": "Aleksandr",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-16T19:29:17.241Z",
     "groups": [],
     "user_permissions": []
   }
@@ -3510,6 +3619,14 @@
 },
 {
   "model": "sessions.session",
+  "pk": "82z95y3b0hv5xo739ea1eklrvdya3mxo",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pCOMENx6b5nIANDpWpoUtqV8e7apAvd_vfef6nA21rC1vISJlEXBer0u0VOj1x3IHeut1mnua7LFPWu6IM2PcySn9fD_Tso3Mq3dlG87Zw7O3J98h4RIApY6B2lZKyhzhDYzEKMMGZkMAnj6JGiEe_V-wOxQjb0:1qhVB2:t1MCMc3WSPD_J2ymlVVKoC91ZxRUHTdahBGfVccv29M",
+    "expire_date": "2023-09-30T13:17:36.941Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "83fzr4en66040amj37m5pt6rf7t1zbv0",
   "fields": {
     "session_data": ".eJxVjM0OwiAQhN-FsyHCsvx49O4zkAW2UjU0Ke3J-O62SQ86x_m-mbeItC41rp3nOBZxESBOv12i_OS2g_Kgdp9kntoyj0nuijxol7ep8Ot6uH8HlXrd1raEAME7Q5ZTcgCeB2ZV1BaLBRVaPA_KOsgK0TFoo5nQgkajfTDi8wXEvjZk:1qbl2w:SM0z_WRJQ2M5Ne4gohyhcDCTClDO318DuhbwkiWxIRs",
@@ -3594,6 +3711,14 @@
   "fields": {
     "session_data": "e30:1qgkjU:TT-rpRNfFsdcvr-bE2HJ2_m2GFyhW7eZmZVXwg6MDU4",
     "expire_date": "2023-09-28T11:42:04.561Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "i357wvzclxqbolyxw1o09w5gleekpuf9",
+  "fields": {
+    "session_data": "e30:1qhb2E:CFWiOu7NHt5ZM8uLVvr76vYv-FmvoCD93Y5MZHUtEGc",
+    "expire_date": "2023-09-30T19:32:54.887Z"
   }
 },
 {
@@ -4001,12 +4126,23 @@
 },
 {
   "model": "api_auth.profile",
-  "pk": 9,
+  "pk": 10,
   "fields": {
-    "user": 9,
-    "fullName": "Алексей Кузнецов",
+    "user": 10,
+    "fullName": "Алексей",
     "phone": "+79991234567",
-    "second_email": "admin@test.ru",
+    "second_email": "aleksey@test.com",
+    "balance": null
+  }
+},
+{
+  "model": "api_auth.profile",
+  "pk": 11,
+  "fields": {
+    "user": 11,
+    "fullName": "Александр",
+    "phone": "89991234567",
+    "second_email": "aleksandr@test.com",
     "balance": null
   }
 },
@@ -4016,6 +4152,24 @@
   "fields": {
     "user": 9,
     "src": "users/user_9/avatar/Aleksiy.png",
+    "alt": ""
+  }
+},
+{
+  "model": "api_auth.avatar",
+  "pk": 7,
+  "fields": {
+    "user": 10,
+    "src": "users/user_10/avatar/Aleksiy.png",
+    "alt": ""
+  }
+},
+{
+  "model": "api_auth.avatar",
+  "pk": 8,
+  "fields": {
+    "user": 11,
+    "src": "users/user_11/avatar/Эльвин.png",
     "alt": ""
   }
 },
@@ -4177,7 +4331,7 @@
   "pk": 1,
   "fields": {
     "category": 9,
-    "price": "900.00",
+    "price": "500.00",
     "count": 20,
     "date": "2023-07-17T15:30:13.422Z",
     "available": true,
@@ -4187,10 +4341,11 @@
     "freeDelivery": false,
     "rating": "5.00",
     "reviews_count": 0,
-    "salePrice": "300.00",
+    "salePrice": "299.00",
     "dateFrom": "2023-08-01T00:00:00Z",
     "dateTo": "2023-08-31T00:00:00Z",
-    "discount": true
+    "discount": true,
+    "current_price": "299.00"
   }
 },
 {
@@ -4211,7 +4366,8 @@
     "salePrice": "399.00",
     "dateFrom": "2023-08-01T00:00:00Z",
     "dateTo": "2023-08-31T00:00:00Z",
-    "discount": true
+    "discount": true,
+    "current_price": "399.00"
   }
 },
 {
@@ -4227,12 +4383,13 @@
     "description": "Отличный монитор",
     "fullDescription": "Прекрасный новый монитор для долгой игры за компьютером.",
     "freeDelivery": false,
-    "rating": "0.00",
+    "rating": "3.00",
     "reviews_count": 0,
     "salePrice": null,
     "dateFrom": null,
     "dateTo": null,
-    "discount": false
+    "discount": false,
+    "current_price": "799.00"
   }
 },
 {
@@ -4248,12 +4405,13 @@
     "description": "Отличные часы",
     "fullDescription": "Прекрасные часы для отслеживания спортивных достижений.",
     "freeDelivery": true,
-    "rating": "4.00",
+    "rating": "4.50",
     "reviews_count": 0,
     "salePrice": "389.00",
     "dateFrom": "2023-08-01T00:00:00Z",
     "dateTo": "2023-08-31T00:00:00Z",
-    "discount": true
+    "discount": true,
+    "current_price": "389.00"
   }
 },
 {
@@ -4261,7 +4419,7 @@
   "pk": 5,
   "fields": {
     "category": 7,
-    "price": "1299.00",
+    "price": "1599.00",
     "count": 20,
     "date": "2023-09-13T07:21:13.235Z",
     "available": true,
@@ -4274,7 +4432,8 @@
     "salePrice": null,
     "dateFrom": "2023-09-13T07:20:39Z",
     "dateTo": null,
-    "discount": false
+    "discount": false,
+    "current_price": "1599.00"
   }
 },
 {
@@ -4581,6 +4740,32 @@
     "text": "Супер часы для бегунов.",
     "rate": 4,
     "date": "2023-09-15T17:26:54.147Z",
+    "product": 4
+  }
+},
+{
+  "model": "api_catalog.productreview",
+  "pk": 17,
+  "fields": {
+    "user": 1,
+    "author": "Aleksey",
+    "email": "aleksey@test.ru",
+    "text": "Средний монитор для игр",
+    "rate": 3,
+    "date": "2023-09-16T13:35:19.048Z",
+    "product": 3
+  }
+},
+{
+  "model": "api_catalog.productreview",
+  "pk": 18,
+  "fields": {
+    "user": 1,
+    "author": "Aleksey",
+    "email": "aleksey@test.ru",
+    "text": "Часы огонь!",
+    "rate": 5,
+    "date": "2023-09-16T13:36:18.827Z",
     "product": 4
   }
 },
@@ -5260,6 +5445,78 @@
   }
 },
 {
+  "model": "cart.cart",
+  "pk": 118,
+  "fields": {
+    "user": null,
+    "created": "2023-09-16T12:22:49.231Z",
+    "session_key": "wprw3hh7288tj6lkf27veznjnhyizsoo"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 119,
+  "fields": {
+    "user": null,
+    "created": "2023-09-16T19:04:54.138Z",
+    "session_key": "nvq7jb5i2fofbujbobrdiswlzfcfqdhp"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 120,
+  "fields": {
+    "user": 10,
+    "created": "2023-09-16T19:08:28.777Z",
+    "session_key": "mgbz4kq7jrp4b8g6yo8w3366x2udbxri"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 121,
+  "fields": {
+    "user": null,
+    "created": "2023-09-16T19:21:41.079Z",
+    "session_key": "tr2oapm0vnaheyec0c0ahwxett5xgh5m"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 122,
+  "fields": {
+    "user": null,
+    "created": "2023-09-16T19:28:32.053Z",
+    "session_key": "wq8mlskjhgikqlg9tosspc27n4zcde5b"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 123,
+  "fields": {
+    "user": 11,
+    "created": "2023-09-16T19:28:52.592Z",
+    "session_key": "fezay376qraon9tz3delwnez7ad9zywl"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 124,
+  "fields": {
+    "user": null,
+    "created": "2023-09-16T19:31:00.502Z",
+    "session_key": "itecdoaf262eaqg0re4c8sjeekzd893g"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 125,
+  "fields": {
+    "user": null,
+    "created": "2023-09-16T19:32:54.806Z",
+    "session_key": "i357wvzclxqbolyxw1o09w5gleekpuf9"
+  }
+},
+{
   "model": "cart.cartitem",
   "pk": 59,
   "fields": {
@@ -5620,6 +5877,36 @@
   }
 },
 {
+  "model": "cart.cartitem",
+  "pk": 135,
+  "fields": {
+    "cart": 120,
+    "product": 3,
+    "count": 1,
+    "created": "2023-09-16T19:26:00.814Z"
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 136,
+  "fields": {
+    "cart": 120,
+    "product": 4,
+    "count": 1,
+    "created": "2023-09-16T19:26:04.598Z"
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 137,
+  "fields": {
+    "cart": 123,
+    "product": 5,
+    "count": 3,
+    "created": "2023-09-16T19:29:53.770Z"
+  }
+},
+{
   "model": "api_order.order",
   "pk": 213,
   "fields": {
@@ -5660,6 +5947,66 @@
   }
 },
 {
+  "model": "api_order.order",
+  "pk": 217,
+  "fields": {
+    "user": 10,
+    "session_key": null,
+    "createdAt": "2023-09-16T19:20:34.659Z",
+    "updated": "2023-09-16T19:21:23.321Z",
+    "fullName": "Алексей",
+    "email": "aleksey@test.com",
+    "phone": "+79991234567",
+    "deliveryType": "express",
+    "paymentType": null,
+    "status": "accepted",
+    "city": "Moscow",
+    "address": "Московская , 2, 23",
+    "paid": true,
+    "total_order_cost": "2498.00"
+  }
+},
+{
+  "model": "api_order.order",
+  "pk": 218,
+  "fields": {
+    "user": 10,
+    "session_key": null,
+    "createdAt": "2023-09-16T19:26:08.496Z",
+    "updated": "2023-09-16T19:26:56.709Z",
+    "fullName": "Алексей",
+    "email": "aleksey@test.com",
+    "phone": "+79991234567",
+    "deliveryType": null,
+    "paymentType": null,
+    "status": "accepted",
+    "city": "Москва",
+    "address": "Московская, 2, 23",
+    "paid": true,
+    "total_order_cost": "1388.00"
+  }
+},
+{
+  "model": "api_order.order",
+  "pk": 219,
+  "fields": {
+    "user": 11,
+    "session_key": null,
+    "createdAt": "2023-09-16T19:29:57.960Z",
+    "updated": "2023-09-16T19:30:54.305Z",
+    "fullName": "Aleksandr",
+    "email": "aleksandr@test.com",
+    "phone": "89991234567",
+    "deliveryType": "express",
+    "paymentType": null,
+    "status": "accepted",
+    "city": "Москва",
+    "address": "Московская, 2, 23",
+    "paid": true,
+    "total_order_cost": "5297.00"
+  }
+},
+{
   "model": "api_order.orderitem",
   "pk": 266,
   "fields": {
@@ -5677,6 +6024,56 @@
     "product": 4,
     "price": "389.00",
     "count": 1
+  }
+},
+{
+  "model": "api_order.orderitem",
+  "pk": 268,
+  "fields": {
+    "order": 217,
+    "product": 2,
+    "price": "399.00",
+    "count": 1
+  }
+},
+{
+  "model": "api_order.orderitem",
+  "pk": 269,
+  "fields": {
+    "order": 217,
+    "product": 5,
+    "price": "1599.00",
+    "count": 1
+  }
+},
+{
+  "model": "api_order.orderitem",
+  "pk": 270,
+  "fields": {
+    "order": 218,
+    "product": 3,
+    "price": "799.00",
+    "count": 1
+  }
+},
+{
+  "model": "api_order.orderitem",
+  "pk": 271,
+  "fields": {
+    "order": 218,
+    "product": 4,
+    "price": "389.00",
+    "count": 1
+  }
+},
+{
+  "model": "api_order.orderitem",
+  "pk": 272,
+  "fields": {
+    "order": 219,
+    "product": 5,
+    "price": "1599.00",
+    "count": 3
   }
 }
 ]

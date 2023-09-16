@@ -8,6 +8,6 @@ urlpatterns = [
     path('api/sign-up', api_views.RegisterAPIView.as_view()),
     path('api/sign-out', api_views.LogoutAPIView.as_view()),
     path('api/profile', api_views.ProfileAPIView.as_view()),
-    path('api/profile/password', api_views.PasswordChangeAPIView.as_view()),
     path('api/profile/avatar', api_views.AvatarChangeAPIView.as_view()),
+    path('api/profile/password', api_views.PasswordChangeAPIView.as_view()),
 ]

@@ -83,6 +83,7 @@ class Product(models.Model):
     dateFrom = models.DateTimeField(blank=True, null=True)
     dateTo = models.DateTimeField(blank=True, null=True)
     discount = models.BooleanField(default=False)
+    current_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
 
 
     class Meta:
@@ -92,6 +93,13 @@ class Product(models.Model):
 
     def __str__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        if self.discount:
+            self.current_price = self.salePrice
+        else:
+            self.current_price = self.price
+        super().save(*args, **kwargs)
 
 
 def product_image_directory_path(instance: "ProductImage", filename: str) -> str:
