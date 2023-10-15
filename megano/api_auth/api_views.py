@@ -143,9 +143,10 @@ class AvatarChangeAPIView(APIView):
                 user_avatar.save()
                 return Response(status=status.HTTP_200_OK)
             else:
+                print('Пришел получать профиль')
                 profile = Profile.objects.get(user_id=request.user.pk)
                 Avatar.objects.create(
-                    user_id=profile.user_id,
+                    user_id=profile.pk,
                     src=avatar,
                 )
             return Response(status=status.HTTP_200_OK)

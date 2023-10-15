@@ -21,11 +21,19 @@ def create_order(request_data, order_id):
 def update_order(order_id, user_id, request_data):
     total_order_cost = float(request_data['totalCost'])
     delivery_type = request_data['deliveryType']
+    payment_type = request_data['paymentType']
+
     if delivery_type == 'express':
         total_order_cost += 500
+    if delivery_type != 'express':
+        delivery_type = 'regular'
     else:
         if total_order_cost < 2000:
             total_order_cost += 200
+
+    if not payment_type:
+        payment_type = 'card'
+
     Order.objects.filter(id=order_id).update(
         user_id=user_id,
         fullName=request_data['fullName'],
@@ -33,7 +41,7 @@ def update_order(order_id, user_id, request_data):
         phone=request_data['phone'],
         deliveryType=delivery_type,
         total_order_cost=total_order_cost,
-        paymentType=request_data['paymentType'],
+        paymentType=payment_type,
         status=request_data['status'],
         city=request_data['city'],
         address=request_data['address'],

@@ -27,8 +27,9 @@ SECRET_KEY = 'django-insecure-15tsiiv1_%gz!e7)$45%4r*v9yjs0!3^ajb0x3i@%h(j$j&c$u
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "0.0.0.0",
-    "127.0.0.1"
+    '0.0.0.0',
+    '127.0.0.1',
+    '*'
 ]
 
 
@@ -44,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-    'django_filters',
     'taggit',
     'phonenumber_field',
     'frontend',
@@ -94,11 +94,14 @@ WSGI_APPLICATION = 'megano.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'megano',
+        'USER': 'postgres',
+        'PASSWORD': '!1234QWER',
+        'HOST': 'db',
+        'PORT': 5432,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -157,6 +160,7 @@ REST_FRAMEWORK = {
 INTERNAL_IPS = [
     '0.0.0.0',
     '127.0.0.1',
+    '*'
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

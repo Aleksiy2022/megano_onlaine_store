@@ -29,15 +29,12 @@ class OrderAPIView(APIView):
         """
         Создать новый заказ
         """
+
         data = request.data
         if request.user.is_authenticated:
-            print('************************************8')
-            print('Сохдание заказа для аутентифицированного польхователя')
             user = request.user
             order = Order.objects.create(user_id=user.pk)
         else:
-            print('************************************8')
-            print('Сохдание заказа для неаутентифицированного польхователя')
             request.session.create()
             session_key = request.session.session_key
             order = Order.objects.create(session_key=session_key)

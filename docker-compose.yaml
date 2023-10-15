@@ -1,39 +1,60 @@
-version: "2.18.1"
+version: "3.8"
 
 services:
+  megano:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672
+      - EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+    command: sh -c "python manage.py migrate &&
+      python manage.py runserver 0.0.0.0:8000"
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./megano:/megano"
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_DB=megano
+      - POSTGRES_PASSWORD=!1234QWER
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./dbdata:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+
   rabbitmq:
     image: rabbitmq:3-management
+    restart: always
     ports:
       - "5672:5672"
       - "15672:15672"
     volumes:
       - ./rabbitmq_data:/var/lib/rabbitmq
 
-  megano:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
-    ports:
-      - "8000:8000"
-    volumes:
-      - ./megano:/megano
-    depends_on:
-      - rabbitmq
-    environment:
-      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672
-      - EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
   celery:
     build:
       context: .
       dockerfile: Dockerfile
     command: celery -A megano worker --loglevel=info
+    restart: always
     depends_on:
       - rabbitmq
     environment:
       - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672
-      - EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+      - EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
     volumes:
       - ./megano:/megano
 
@@ -41,13 +62,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    restart: always
     ports:
       - "5555:5555"
     depends_on:
       - celery
     environment:
       - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672
-      - EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+      - EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
     command:
       - celery
       - -A

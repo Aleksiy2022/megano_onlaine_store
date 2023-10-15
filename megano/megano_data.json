@@ -1,0 +1,2597 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2023-10-13T11:00:23.046Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Компьютеры",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\", \"object\": \"CategoryImage object (1)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2023-10-13T11:01:09.107Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "2",
+      "object_repr": "Видеокарты",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\", \"object\": \"CategoryImage object (2)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2023-10-13T11:01:37.030Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "3",
+      "object_repr": "Процессоры",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\", \"object\": \"CategoryImage object (3)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2023-10-13T11:02:17.295Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "4",
+      "object_repr": "Продукция Apple",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\", \"object\": \"CategoryImage object (4)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2023-10-13T11:02:55.066Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "5",
+      "object_repr": "Apple Watch",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\", \"object\": \"CategoryImage object (5)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2023-10-13T11:03:22.275Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "6",
+      "object_repr": "Блоки питания",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\", \"object\": \"CategoryImage object (6)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2023-10-13T11:04:00.165Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "7",
+      "object_repr": "Macbook",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\", \"object\": \"CategoryImage object (7)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2023-10-13T11:04:35.103Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "8",
+      "object_repr": "Iphone",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\", \"object\": \"CategoryImage object (8)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2023-10-13T11:05:17.892Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "9",
+      "object_repr": "Мониторы",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\", \"object\": \"CategoryImage object (9)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2023-10-13T11:13:23.931Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Монитор Samsung 23.5\" C24RG50FQI",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (1)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (2)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (3)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (4)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (5)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2023-10-13T11:16:16.404Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "Iphone 14",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (6)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (7)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (8)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2023-10-13T11:16:54.232Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "1",
+      "object_repr": "Iphone 14",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2023-10-13T11:17:09.063Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "2",
+      "object_repr": "Iphone 14",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2023-10-13T11:17:24.208Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "3",
+      "object_repr": "Iphone 14",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2023-10-13T11:17:50.165Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "4",
+      "object_repr": "Iphone 14",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2023-10-13T11:18:34.306Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "5",
+      "object_repr": "Монитор Samsung 23.5\" C24RG50FQI",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2023-10-13T11:18:42.838Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "6",
+      "object_repr": "Монитор Samsung 23.5\" C24RG50FQI",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2023-10-13T11:19:07.498Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "7",
+      "object_repr": "Монитор Samsung 23.5\" C24RG50FQI",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2023-10-13T11:19:24.621Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "8",
+      "object_repr": "Монитор Samsung 23.5\" C24RG50FQI",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2023-10-13T11:25:47.094Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "3",
+      "object_repr": "23.8\" Монитор MSI Pro MP241X черный",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (9)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (10)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (11)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2023-10-13T11:26:20.120Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "9",
+      "object_repr": "23.8\" Монитор MSI Pro MP241X черный",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2023-10-13T11:26:39.615Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "10",
+      "object_repr": "23.8\" Монитор MSI Pro MP241X черный",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2023-10-13T11:26:51.523Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "11",
+      "object_repr": "23.8\" Монитор MSI Pro MP241X черный",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2023-10-13T11:30:15.008Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "4",
+      "object_repr": "Смарт-часы Apple Watch Series 8 41mm",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (12)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (13)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (14)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2023-10-13T11:30:39.632Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "12",
+      "object_repr": "Смарт-часы Apple Watch Series 8 41mm",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2023-10-13T11:30:53.292Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "13",
+      "object_repr": "Смарт-часы Apple Watch Series 8 41mm",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2023-10-13T11:31:03.207Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "14",
+      "object_repr": "Смарт-часы Apple Watch Series 8 41mm",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2023-10-13T11:35:59.763Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "5",
+      "object_repr": "Процессор Intel Core i9-12900KF BOX",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (15)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (16)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (17)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2023-10-13T11:36:23.720Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "15",
+      "object_repr": "Процессор Intel Core i9-12900KF BOX",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2023-10-13T11:36:42.334Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "16",
+      "object_repr": "Процессор Intel Core i9-12900KF BOX",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2023-10-13T11:36:58.785Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "17",
+      "object_repr": "Процессор Intel Core i9-12900KF BOX",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2023-10-13T11:39:07.981Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "6",
+      "object_repr": "13.3\" Ноутбук Apple MacBook Air",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (18)\"}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\", \"object\": \"ProductImage object (19)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2023-10-13T11:41:54.804Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Монитор Samsung 23.5\" C24RG50FQI",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"FreeDelivery\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2023-10-13T11:42:05.321Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "3",
+      "object_repr": "23.8\" Монитор MSI Pro MP241X черный",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"FreeDelivery\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add tag",
+      "content_type": 7,
+      "codename": "add_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change tag",
+      "content_type": 7,
+      "codename": "change_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete tag",
+      "content_type": 7,
+      "codename": "delete_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view tag",
+      "content_type": 7,
+      "codename": "view_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add tagged item",
+      "content_type": 8,
+      "codename": "add_taggeditem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change tagged item",
+      "content_type": 8,
+      "codename": "change_taggeditem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete tagged item",
+      "content_type": 8,
+      "codename": "delete_taggeditem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view tagged item",
+      "content_type": 8,
+      "codename": "view_taggeditem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add Профиль пользоввателя",
+      "content_type": 9,
+      "codename": "add_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change Профиль пользоввателя",
+      "content_type": 9,
+      "codename": "change_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete Профиль пользоввателя",
+      "content_type": 9,
+      "codename": "delete_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view Профиль пользоввателя",
+      "content_type": 9,
+      "codename": "view_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add avatar",
+      "content_type": 10,
+      "codename": "add_avatar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change avatar",
+      "content_type": 10,
+      "codename": "change_avatar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete avatar",
+      "content_type": 10,
+      "codename": "delete_avatar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view avatar",
+      "content_type": 10,
+      "codename": "view_avatar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add Категория",
+      "content_type": 11,
+      "codename": "add_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change Категория",
+      "content_type": 11,
+      "codename": "change_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete Категория",
+      "content_type": 11,
+      "codename": "delete_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view Категория",
+      "content_type": 11,
+      "codename": "view_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add Изображение категории",
+      "content_type": 12,
+      "codename": "add_categoryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change Изображение категории",
+      "content_type": 12,
+      "codename": "change_categoryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete Изображение категории",
+      "content_type": 12,
+      "codename": "delete_categoryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view Изображение категории",
+      "content_type": 12,
+      "codename": "view_categoryimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add Товар",
+      "content_type": 13,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change Товар",
+      "content_type": 13,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete Товар",
+      "content_type": 13,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view Товар",
+      "content_type": 13,
+      "codename": "view_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add Изображение товара",
+      "content_type": 14,
+      "codename": "add_productimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change Изображение товара",
+      "content_type": 14,
+      "codename": "change_productimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete Изображение товара",
+      "content_type": 14,
+      "codename": "delete_productimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view Изображение товара",
+      "content_type": 14,
+      "codename": "view_productimage"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add Отзыв на товар",
+      "content_type": 15,
+      "codename": "add_productreview"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change Отзыв на товар",
+      "content_type": 15,
+      "codename": "change_productreview"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete Отзыв на товар",
+      "content_type": 15,
+      "codename": "delete_productreview"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view Отзыв на товар",
+      "content_type": 15,
+      "codename": "view_productreview"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add Характеристики продукта",
+      "content_type": 16,
+      "codename": "add_productspecifications"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change Характеристики продукта",
+      "content_type": 16,
+      "codename": "change_productspecifications"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete Характеристики продукта",
+      "content_type": 16,
+      "codename": "delete_productspecifications"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view Характеристики продукта",
+      "content_type": 16,
+      "codename": "view_productspecifications"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add cart",
+      "content_type": 17,
+      "codename": "add_cart"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change cart",
+      "content_type": 17,
+      "codename": "change_cart"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete cart",
+      "content_type": 17,
+      "codename": "delete_cart"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view cart",
+      "content_type": 17,
+      "codename": "view_cart"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add cart item",
+      "content_type": 18,
+      "codename": "add_cartitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change cart item",
+      "content_type": 18,
+      "codename": "change_cartitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete cart item",
+      "content_type": 18,
+      "codename": "delete_cartitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view cart item",
+      "content_type": 18,
+      "codename": "view_cartitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+      "name": "Can add Заказ",
+      "content_type": 19,
+      "codename": "add_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+      "name": "Can change Заказ",
+      "content_type": 19,
+      "codename": "change_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "name": "Can delete Заказ",
+      "content_type": 19,
+      "codename": "delete_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "name": "Can view Заказ",
+      "content_type": 19,
+      "codename": "view_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+      "name": "Can add order item",
+      "content_type": 20,
+      "codename": "add_orderitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+      "name": "Can change order item",
+      "content_type": 20,
+      "codename": "change_orderitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+      "name": "Can delete order item",
+      "content_type": 20,
+      "codename": "delete_orderitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+      "name": "Can view order item",
+      "content_type": 20,
+      "codename": "view_orderitem"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$O7Ty41XXDaIRIrX29ybJoq$AgAhDkhDmvFX13ixqNrGXkTh9Hb/fXikI91Uc+xPaGA=",
+      "last_login": "2023-10-13T10:58:06.382Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@example.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-10-13T10:55:44.713Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$7Cak79G5jIGm0iUi3DMKIO$olU9F8l4c5DG0QSrtN1XzgcEkAyF8cbFPtkAuxYPy6o=",
+      "last_login": "2023-10-13T12:12:05.034Z",
+      "is_superuser": false,
+      "username": "Aleksey",
+      "first_name": "Aleksey",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-10-13T11:43:54.925Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "taggit",
+      "model": "tag"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "taggit",
+      "model": "taggeditem"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "api_auth",
+      "model": "profile"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "api_auth",
+      "model": "avatar"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "api_catalog",
+      "model": "category"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "api_catalog",
+      "model": "categoryimage"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "api_catalog",
+      "model": "product"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "api_catalog",
+      "model": "productimage"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "api_catalog",
+      "model": "productreview"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+      "app_label": "api_catalog",
+      "model": "productspecifications"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+      "app_label": "cart",
+      "model": "cart"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+      "app_label": "cart",
+      "model": "cartitem"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+      "app_label": "api_order",
+      "model": "order"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+      "app_label": "api_order",
+      "model": "orderitem"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "o2v983f4prsqo3z62rov5yx2ps1mcjgf",
+    "fields": {
+      "session_data": ".eJxVjMEOwiAQRP-FsyFAQYpH734D2WUXqRpISnsy_rtt0oPeJvPezFtEWJcS185znEhchBGn3w4hPbnugB5Q702mVpd5Qrkr8qBd3hrx63q4fwcFetnW2puEPmMAq0DrLSUw2ZNmhdaNFojODtCR9jAEziGzTpjMOLDLzinx-QIHjDjk:1qrH1R:MmbxKSHqJIXqd6QFoC78Cwl2NdcUvSdWtGfBiXnE7ZI",
+      "expire_date": "2023-10-27T12:12:05.042Z"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 1,
+    "fields": {
+      "name": "samsung",
+      "slug": "samsung"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 2,
+    "fields": {
+      "name": "монитор",
+      "slug": "монитор"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 3,
+    "fields": {
+      "name": "игры",
+      "slug": "игры"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 4,
+    "fields": {
+      "name": "айфон",
+      "slug": "айфон"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 5,
+    "fields": {
+      "name": "телефон",
+      "slug": "телефон"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 6,
+    "fields": {
+      "name": "iPhone",
+      "slug": "iphone"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 7,
+    "fields": {
+      "name": "apple",
+      "slug": "apple"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 8,
+    "fields": {
+      "name": "msi",
+      "slug": "msi"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 9,
+    "fields": {
+      "name": "applewatch",
+      "slug": "applewatch"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 10,
+    "fields": {
+      "name": "часы",
+      "slug": "часы"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 11,
+    "fields": {
+      "name": "процессор",
+      "slug": "процессор"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 12,
+    "fields": {
+      "name": "intel",
+      "slug": "intel"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 13,
+    "fields": {
+      "name": "Macbook",
+      "slug": "macbook"
+    }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 14,
+    "fields": {
+      "name": "ноутбук",
+      "slug": "ноутбук"
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 1,
+    "fields": {
+      "tag": 1,
+      "content_type": 13,
+      "object_id": 1
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 2,
+    "fields": {
+      "tag": 2,
+      "content_type": 13,
+      "object_id": 1
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 3,
+    "fields": {
+      "tag": 3,
+      "content_type": 13,
+      "object_id": 1
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 4,
+    "fields": {
+      "tag": 4,
+      "content_type": 13,
+      "object_id": 2
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 5,
+    "fields": {
+      "tag": 5,
+      "content_type": 13,
+      "object_id": 2
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 6,
+    "fields": {
+      "tag": 6,
+      "content_type": 13,
+      "object_id": 2
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 7,
+    "fields": {
+      "tag": 7,
+      "content_type": 13,
+      "object_id": 2
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 8,
+    "fields": {
+      "tag": 8,
+      "content_type": 13,
+      "object_id": 3
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 9,
+    "fields": {
+      "tag": 2,
+      "content_type": 13,
+      "object_id": 3
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 10,
+    "fields": {
+      "tag": 3,
+      "content_type": 13,
+      "object_id": 3
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 11,
+    "fields": {
+      "tag": 9,
+      "content_type": 13,
+      "object_id": 4
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 12,
+    "fields": {
+      "tag": 10,
+      "content_type": 13,
+      "object_id": 4
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 13,
+    "fields": {
+      "tag": 7,
+      "content_type": 13,
+      "object_id": 4
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 14,
+    "fields": {
+      "tag": 11,
+      "content_type": 13,
+      "object_id": 5
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 15,
+    "fields": {
+      "tag": 12,
+      "content_type": 13,
+      "object_id": 5
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 16,
+    "fields": {
+      "tag": 13,
+      "content_type": 13,
+      "object_id": 6
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 17,
+    "fields": {
+      "tag": 14,
+      "content_type": 13,
+      "object_id": 6
+    }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 18,
+    "fields": {
+      "tag": 7,
+      "content_type": 13,
+      "object_id": 6
+    }
+  },
+  {
+    "model": "api_auth.profile",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "fullName": "Алексей Алексеев Алексеевич",
+      "phone": "+79991234567",
+      "second_email": "aleksey@test.com",
+      "balance": null
+    }
+  },
+  {
+    "model": "api_auth.avatar",
+    "pk": 9,
+    "fields": {
+      "user": 1,
+      "src": "users/user_1/avatar/Aleksiy.png",
+      "alt": ""
+    }
+  },
+  {
+    "model": "api_catalog.category",
+    "pk": 1,
+    "fields": {
+      "title": "Компьютеры",
+      "categories": null
+    }
+  },
+  {
+    "model": "api_catalog.category",
+    "pk": 2,
+    "fields": {
+      "title": "Видеокарты",
+      "categories": 1
+    }
+  },
+  {
+    "model": "api_catalog.category",
+    "pk": 3,
+    "fields": {
+      "title": "Процессоры",
+      "categories": 1
+    }
+  },
+  {
+    "model": "api_catalog.category",
+    "pk": 4,
+    "fields": {
+      "title": "Продукция Apple",
+      "categories": null
+    }
+  },
+  {
+    "model": "api_catalog.category",
+    "pk": 5,
+    "fields": {
+      "title": "Apple Watch",
+      "categories": 4
+    }
+  },
+  {
+    "model": "api_catalog.category",
+    "pk": 6,
+    "fields": {
+      "title": "Блоки питания",
+      "categories": 1
+    }
+  },
+  {
+    "model": "api_catalog.category",
+    "pk": 7,
+    "fields": {
+      "title": "Macbook",
+      "categories": 4
+    }
+  },
+  {
+    "model": "api_catalog.category",
+    "pk": 8,
+    "fields": {
+      "title": "Iphone",
+      "categories": 4
+    }
+  },
+  {
+    "model": "api_catalog.category",
+    "pk": 9,
+    "fields": {
+      "title": "Мониторы",
+      "categories": 1
+    }
+  },
+  {
+    "model": "api_catalog.categoryimage",
+    "pk": 1,
+    "fields": {
+      "src": "categories/category_1/img/computers.jpg",
+      "alt": "Категория компбютеры",
+      "category": 1
+    }
+  },
+  {
+    "model": "api_catalog.categoryimage",
+    "pk": 2,
+    "fields": {
+      "src": "categories/category_2/img/videocart.jpg",
+      "alt": "Категория видеокарт",
+      "category": 2
+    }
+  },
+  {
+    "model": "api_catalog.categoryimage",
+    "pk": 3,
+    "fields": {
+      "src": "categories/category_3/img/processors.jpg",
+      "alt": "Категория процессоры",
+      "category": 3
+    }
+  },
+  {
+    "model": "api_catalog.categoryimage",
+    "pk": 4,
+    "fields": {
+      "src": "categories/category_4/img/apple.jpg",
+      "alt": "Продукция Apple",
+      "category": 4
+    }
+  },
+  {
+    "model": "api_catalog.categoryimage",
+    "pk": 5,
+    "fields": {
+      "src": "categories/category_5/img/apple_watch.jpg",
+      "alt": "Apple watch",
+      "category": 5
+    }
+  },
+  {
+    "model": "api_catalog.categoryimage",
+    "pk": 6,
+    "fields": {
+      "src": "categories/category_6/img/block_pitaniy.jpg",
+      "alt": "Блоки питания",
+      "category": 6
+    }
+  },
+  {
+    "model": "api_catalog.categoryimage",
+    "pk": 7,
+    "fields": {
+      "src": "categories/category_7/img/mac_book.jpg",
+      "alt": "Макбуки",
+      "category": 7
+    }
+  },
+  {
+    "model": "api_catalog.categoryimage",
+    "pk": 8,
+    "fields": {
+      "src": "categories/category_8/img/ajfon-14.jpg",
+      "alt": "IPhone 14",
+      "category": 8
+    }
+  },
+  {
+    "model": "api_catalog.categoryimage",
+    "pk": 9,
+    "fields": {
+      "src": "categories/category_9/img/Монитор.png",
+      "alt": "Категория мониторов",
+      "category": 9
+    }
+  },
+  {
+    "model": "api_catalog.product",
+    "pk": 1,
+    "fields": {
+      "category": 9,
+      "price": "300.00",
+      "count": 20,
+      "date": "2023-10-13T11:13:23.665Z",
+      "available": true,
+      "title": "Монитор Samsung 23.5\" C24RG50FQI",
+      "description": "Отличный монитор для игр",
+      "fullDescription": "23.5″ Монитор Samsung C24RG50FQI [LC24RG50FQIXCI] специально сделан для тех, кто любит играть на компьютере в разные игры. Для большего комфорта во время игр или просмотра фильмов монитор сделан в изогнутой форме. Такая форма обеспечивает полное погружение в игру, так как и края, и центр монитора расположены под оптимальным для глаза углом. А VA-матрица с LED-подсветкой предполагает минимальное время оклика (4 мс), что немаловажно для динамичных игр, так как исключает любое торможение кадров. Кр",
+      "freeDelivery": false,
+      "rating": "0.00",
+      "reviews_count": 0,
+      "salePrice": "199.00",
+      "dateFrom": "2023-10-13T11:12:40Z",
+      "dateTo": "2023-11-30T11:12:46Z",
+      "discount": true,
+      "current_price": "199.00"
+    }
+  },
+  {
+    "model": "api_catalog.product",
+    "pk": 2,
+    "fields": {
+      "category": 8,
+      "price": "999.00",
+      "count": 15,
+      "date": "2023-10-13T11:16:16.030Z",
+      "available": true,
+      "title": "Iphone 14",
+      "description": "iPhone 14 Pro 6,1",
+      "fullDescription": "У iPhone 14 Pro 6,1--дюймовая панель. Пиковая яркость — 2000 нит. Используется небольшой вырез с датчиком фронтальной камеры и системой Face ID. Кроме того, он способен визуально уменьшаться и увеличиваться. Предусмотрен режим Always-on Display (экран всегда включен).\r\nАппаратная основа — A16 Bionic. Это 4-нм SoC с производительным GPU и дополнительным процессором Image Signal Proccessor для повышения качества снимков.\r\nТыльная камера iPhone 14 Pro тройная, на 48, 12 и 12 Мп. Ночью iPhone 14",
+      "freeDelivery": true,
+      "rating": "0.00",
+      "reviews_count": 0,
+      "salePrice": null,
+      "dateFrom": null,
+      "dateTo": null,
+      "discount": false,
+      "current_price": "999.00"
+    }
+  },
+  {
+    "model": "api_catalog.product",
+    "pk": 3,
+    "fields": {
+      "category": 9,
+      "price": "250.00",
+      "count": 20,
+      "date": "2023-10-13T11:25:46.728Z",
+      "available": true,
+      "title": "23.8\" Монитор MSI Pro MP241X черный",
+      "description": "23.8\" Монитор MSI Pro MP241X черный",
+      "fullDescription": "Рекомендуется подключать монитор с использованием комплектных видеокабелей непосредственно в видеокарту. Максимальная частота обновления кадров при подключении к встроенной видеокарте материнской платы может быть ограничена до 60 Гц, при подключении к игровой приставке — до 120Гц.\r\nПри некорректной работе подсветки (для мониторов с типом подсветки матрицы miniLED), нарушении работы матрицы, искажении изображения, также рекомендуется произвести сброс настроек",
+      "freeDelivery": false,
+      "rating": "0.00",
+      "reviews_count": 0,
+      "salePrice": "189.00",
+      "dateFrom": "2023-10-13T11:25:19Z",
+      "dateTo": "2023-11-30T11:25:27Z",
+      "discount": true,
+      "current_price": "189.00"
+    }
+  },
+  {
+    "model": "api_catalog.product",
+    "pk": 4,
+    "fields": {
+      "category": 5,
+      "price": "430.00",
+      "count": 9,
+      "date": "2023-10-13T11:30:14.682Z",
+      "available": true,
+      "title": "Смарт-часы Apple Watch Series 8 41mm",
+      "description": "Смарт-часы Apple Watch Series 8 41mm",
+      "fullDescription": "Смарт-часы Apple Watch Series 8 41mm оснащены колесиком Digital Crown, которое ускоряет доступ к функционалу и облегчает управление. Встроенные датчики измеряют температуру тела и содержание кислорода в крови. Функция женского здоровья позволяет отслеживать симптомы и контролировать цикл. Трансляция информации производится на сенсорный OLED-дисплей. Альтиметр станет находкой для любителей походов. Его задача заключается в расчете высоты относительно уровня моря.\r\nСмарт-часы Apple Watch Series 8",
+      "freeDelivery": true,
+      "rating": "0.00",
+      "reviews_count": 0,
+      "salePrice": "399.00",
+      "dateFrom": "2023-10-13T11:29:44Z",
+      "dateTo": "2023-10-31T11:29:48Z",
+      "discount": true,
+      "current_price": "399.00"
+    }
+  },
+  {
+    "model": "api_catalog.product",
+    "pk": 5,
+    "fields": {
+      "category": 3,
+      "price": "500.00",
+      "count": 9,
+      "date": "2023-10-13T11:35:59.522Z",
+      "available": true,
+      "title": "Процессор Intel Core i9-12900KF BOX",
+      "description": "Процессор Intel Core i9-12900KF BOX",
+      "fullDescription": "16-ядерный процессор Intel Core i9-12900KF BOX – отличный выбор для пользователей, желающих собрать игровой ПК с экстремально высоким уровнем производительности. Устройство также подходит для комплектации рабочей станции экстра-класса. CPU устанавливается в сокет LGA 1700. Интегрированное графическое ядро отсутствует.\r\nБазовая частота процессора Intel Core i9-12900KF BOX – 3.2 ГГц. Максимальная частота в турборежиме значительно выше – 5.2 ГГц. Процессор совместим с памятью DDR4 и DDR5",
+      "freeDelivery": true,
+      "rating": "0.00",
+      "reviews_count": 0,
+      "salePrice": null,
+      "dateFrom": null,
+      "dateTo": null,
+      "discount": false,
+      "current_price": "500.00"
+    }
+  },
+  {
+    "model": "api_catalog.product",
+    "pk": 6,
+    "fields": {
+      "category": 7,
+      "price": "1199.00",
+      "count": 14,
+      "date": "2023-10-13T11:39:07.708Z",
+      "available": true,
+      "title": "13.3\" Ноутбук Apple MacBook Air",
+      "description": "13.3\" Ноутбук Apple MacBook Air",
+      "fullDescription": "Ноутбук Apple MacBook Air разработан с учетом динамичного образа жизни. Он предлагает широкие возможности для решения повседневных задач. Достаточно высокая производительность достигается благодаря процессору Apple M1 с 8 ядрами, 8 ГБ памяти ОЗУ и накопителю SSD 256 ГБ. На экране 13.3 дюйма IPS с разрешением 2560x1600 пикселей отображается четкая и красочная картинка.\r\nКлавиатура с белой LED-подсветкой и эргономичной раскладкой гарантирует удобство работы в программах в любое время суток.",
+      "freeDelivery": true,
+      "rating": "0.00",
+      "reviews_count": 0,
+      "salePrice": "999.00",
+      "dateFrom": "2023-10-13T11:38:57Z",
+      "dateTo": "2023-11-30T11:39:02Z",
+      "discount": true,
+      "current_price": "999.00"
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 1,
+    "fields": {
+      "src": "products/product_1/img/0b04df8ef4dc56d7d2765d149708c19267e837a10957b51feae173b5242d44df.jpg.webp",
+      "alt": "Монитор Samsung 23.5",
+      "product": 1
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 2,
+    "fields": {
+      "src": "products/product_1/img/08e5a2e1b283a52a0ef3f0b70a62b393644ebbe3968634b4f7b57dadc213c3df.jpg.webp",
+      "alt": "Монитор Samsung 23.5",
+      "product": 1
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 3,
+    "fields": {
+      "src": "products/product_1/img/473540eeadc2f2ff8550bcc9fb665eae611ee4a4884478f2b4fad55a58bd65de.jpg.webp",
+      "alt": "Монитор Samsung 23.5",
+      "product": 1
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 4,
+    "fields": {
+      "src": "products/product_1/img/bdc3be4daf0ce2958b69e090e8ac391b7a0bfe6622e95b40e467ea22e801d731.jpg.webp",
+      "alt": "Монитор Samsung 23.5",
+      "product": 1
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 5,
+    "fields": {
+      "src": "products/product_1/img/Монитор_Samsung_C24RG50FQI_черный_2.jpg",
+      "alt": "Монитор Samsung 23.5",
+      "product": 1
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 6,
+    "fields": {
+      "src": "products/product_2/img/iPhone_14_2.jpeg",
+      "alt": "Iphone",
+      "product": 2
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 7,
+    "fields": {
+      "src": "products/product_2/img/iPhone_14_3.jpeg",
+      "alt": "Iphone",
+      "product": 2
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 8,
+    "fields": {
+      "src": "products/product_2/img/iPhone_14_4.jpeg",
+      "alt": "Iphone",
+      "product": 2
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 9,
+    "fields": {
+      "src": "products/product_3/img/монитор_2.webp",
+      "alt": "23.8\" Монитор MSI Pro MP241X черный",
+      "product": 3
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 10,
+    "fields": {
+      "src": "products/product_3/img/70a81beaa9b9061ea56b9a2827675a31d7caa00e560669c1002029357148c8bd.jpg.webp",
+      "alt": "23.8\" Монитор MSI Pro MP241X черный",
+      "product": 3
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 11,
+    "fields": {
+      "src": "products/product_3/img/fda6beda3e7cdf611dfea1332e23e48345bd3f2420c328948c6936f80792db7d.jpg.webp",
+      "alt": "23.8\" Монитор MSI Pro MP241X черный",
+      "product": 3
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 12,
+    "fields": {
+      "src": "products/product_4/img/apple_watch_1.jpg",
+      "alt": "Apple watch",
+      "product": 4
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 13,
+    "fields": {
+      "src": "products/product_4/img/apple_watch_2.jpg",
+      "alt": "Apple watch",
+      "product": 4
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 14,
+    "fields": {
+      "src": "products/product_4/img/apple_watch_3.jpg",
+      "alt": "Apple watch",
+      "product": 4
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 15,
+    "fields": {
+      "src": "products/product_5/img/f47f069cb540be44529049db844c51c2a8a9b6096a453138505ef8a68ec0a0ad.jpg.webp",
+      "alt": "Процессор Intel Core i9-12900KF BOX",
+      "product": 5
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 16,
+    "fields": {
+      "src": "products/product_5/img/606b36f49d8ff3809050d52278ec4e26c574e98cf158a32f28a2f0eea2ccb4ee.jpg.webp",
+      "alt": "Процессор Intel Core i9-12900KF BOX",
+      "product": 5
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 17,
+    "fields": {
+      "src": "products/product_5/img/eb04e2014e3d91855102650964bf8a66009bdefe93fec4466616f2fedfdade82.jpg.webp",
+      "alt": "Процессор Intel Core i9-12900KF BOX",
+      "product": 5
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 18,
+    "fields": {
+      "src": "products/product_6/img/air.jpg",
+      "alt": "Макбук",
+      "product": 6
+    }
+  },
+  {
+    "model": "api_catalog.productimage",
+    "pk": 19,
+    "fields": {
+      "src": "products/product_6/img/Мак_бук.jpg",
+      "alt": "Макбук",
+      "product": 6
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 1,
+    "fields": {
+      "product": 2,
+      "name": "Модель",
+      "value": "Apple iPhone 14 Pro"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 2,
+    "fields": {
+      "product": 2,
+      "name": "Год релиза",
+      "value": "2022"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 3,
+    "fields": {
+      "product": 2,
+      "name": "Цвет задней панели",
+      "value": "Золотой"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 4,
+    "fields": {
+      "product": 2,
+      "name": "Формат SIM-карт",
+      "value": "Nano-SIM"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 5,
+    "fields": {
+      "product": 1,
+      "name": "Страна-производитель",
+      "value": "Китай"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 6,
+    "fields": {
+      "product": 1,
+      "name": "Тип",
+      "value": "Монитор"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 7,
+    "fields": {
+      "product": 1,
+      "name": "Изогнутый экран",
+      "value": "да"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 8,
+    "fields": {
+      "product": 1,
+      "name": "Диагональ экрана",
+      "value": "23.5"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 9,
+    "fields": {
+      "product": 3,
+      "name": "Страна-производитель",
+      "value": "Китай"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 10,
+    "fields": {
+      "product": 3,
+      "name": "Модель",
+      "value": "MSI Pro MP241X"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 11,
+    "fields": {
+      "product": 3,
+      "name": "Основной цвет",
+      "value": "Черный"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 12,
+    "fields": {
+      "product": 4,
+      "name": "Тип",
+      "value": "Смарт часы"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 13,
+    "fields": {
+      "product": 4,
+      "name": "Модель",
+      "value": "Apple Watch Series 8 41mm"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 14,
+    "fields": {
+      "product": 4,
+      "name": "Год релиза",
+      "value": "2022"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 15,
+    "fields": {
+      "product": 5,
+      "name": "Модель",
+      "value": "ntel Core i9-12900KF"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 16,
+    "fields": {
+      "product": 5,
+      "name": "Сокет",
+      "value": "LGA 1700"
+    }
+  },
+  {
+    "model": "api_catalog.productspecifications",
+    "pk": 17,
+    "fields": {
+      "product": 5,
+      "name": "Страна производитель",
+      "value": "Китай"
+    }
+  },
+  {
+    "model": "cart.cart",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "created": "2023-10-13T10:57:34.634Z",
+      "session_key": "ia9j1h9sy0x1c0cslfmmmyi9odce03yf"
+    }
+  },
+  {
+    "model": "cart.cart",
+    "pk": 2,
+    "fields": {
+      "user": null,
+      "created": "2023-10-13T10:57:48.736Z",
+      "session_key": "hv2q18kqvycbl271ws09z0m3dxbbumby"
+    }
+  },
+  {
+    "model": "cart.cart",
+    "pk": 3,
+    "fields": {
+      "user": 2,
+      "created": "2023-10-13T11:43:36.277Z",
+      "session_key": "kbzgy8r5nv1nl0npth3tua39zpv5rj74"
+    }
+  },
+  {
+    "model": "cart.cart",
+    "pk": 4,
+    "fields": {
+      "user": null,
+      "created": "2023-10-13T12:11:36.306Z",
+      "session_key": "dhdsgr8ir9vnt82tznno7ghohvl3sely"
+    }
+  },
+  {
+    "model": "cart.cartitem",
+    "pk": 13,
+    "fields": {
+      "cart": 3,
+      "product": 3,
+      "count": 5,
+      "created": "2023-10-13T14:07:24.788Z"
+    }
+  },
+  {
+    "model": "api_order.order",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "session_key": null,
+      "createdAt": "2023-10-13T12:12:32.839Z",
+      "updated": "2023-10-13T12:15:08.511Z",
+      "fullName": "Алексей Алексеев Алексеевич",
+      "email": "aleksey@test.com",
+      "phone": "+79991234567",
+      "deliveryType": "express",
+      "paymentType": null,
+      "status": "accepted",
+      "city": "Москва",
+      "address": "Московская, 2, 23",
+      "paid": true,
+      "total_order_cost": "1088.00"
+    }
+  },
+  {
+    "model": "api_order.order",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "session_key": null,
+      "createdAt": "2023-10-13T12:22:49.389Z",
+      "updated": "2023-10-13T12:22:49.389Z",
+      "fullName": null,
+      "email": null,
+      "phone": null,
+      "deliveryType": null,
+      "paymentType": null,
+      "status": "unaccepted",
+      "city": null,
+      "address": null,
+      "paid": false,
+      "total_order_cost": null
+    }
+  },
+  {
+    "model": "api_order.order",
+    "pk": 3,
+    "fields": {
+      "user": 2,
+      "session_key": null,
+      "createdAt": "2023-10-13T12:23:22.527Z",
+      "updated": "2023-10-13T12:24:57.565Z",
+      "fullName": "Алексей Алексеев Алексеевич",
+      "email": "aleksey@test.com",
+      "phone": "+79991234567",
+      "deliveryType": "express",
+      "paymentType": null,
+      "status": "accepted",
+      "city": "Москва",
+      "address": "Московская, 2, 23",
+      "paid": true,
+      "total_order_cost": "29030.00"
+    }
+  },
+  {
+    "model": "api_order.order",
+    "pk": 4,
+    "fields": {
+      "user": 2,
+      "session_key": null,
+      "createdAt": "2023-10-13T13:49:48.728Z",
+      "updated": "2023-10-13T13:58:38.733Z",
+      "fullName": "Алексей Алексеев Алексеевич",
+      "email": "aleksey@test.com",
+      "phone": "+79991234567",
+      "deliveryType": null,
+      "paymentType": null,
+      "status": "accepted",
+      "city": "Москва",
+      "address": "Московская, 2, 23",
+      "paid": true,
+      "total_order_cost": "3834.00"
+    }
+  },
+  {
+    "model": "api_order.order",
+    "pk": 5,
+    "fields": {
+      "user": 2,
+      "session_key": null,
+      "createdAt": "2023-10-13T14:00:20.503Z",
+      "updated": "2023-10-13T14:04:15.428Z",
+      "fullName": "Алексей Алексеев Алексеевич",
+      "email": "aleksey@test.com",
+      "phone": "+79991234567",
+      "deliveryType": null,
+      "paymentType": "someone",
+      "status": "accepted",
+      "city": "Москва",
+      "address": "Московская, 2, 23",
+      "paid": true,
+      "total_order_cost": "1199.00"
+    }
+  },
+  {
+    "model": "api_order.order",
+    "pk": 6,
+    "fields": {
+      "user": 2,
+      "session_key": null,
+      "createdAt": "2023-10-13T14:07:32.746Z",
+      "updated": "2023-10-13T14:08:34.592Z",
+      "fullName": "Алексей Алексеев Алексеевич",
+      "email": "aleksey@test.com",
+      "phone": "+79991234567",
+      "deliveryType": null,
+      "paymentType": null,
+      "status": "accepted",
+      "city": "Москва",
+      "address": "Московская, 2, 23",
+      "paid": true,
+      "total_order_cost": "389.00"
+    }
+  },
+  {
+    "model": "api_order.order",
+    "pk": 7,
+    "fields": {
+      "user": 2,
+      "session_key": null,
+      "createdAt": "2023-10-13T14:09:49.448Z",
+      "updated": "2023-10-13T14:49:20.913Z",
+      "fullName": "Алексей Алексеев Алексеевич",
+      "email": "aleksey@test.com",
+      "phone": "+79991234567",
+      "deliveryType": "express",
+      "paymentType": "someone",
+      "status": "accepted",
+      "city": "Москва",
+      "address": "Московская, 2, 23",
+      "paid": true,
+      "total_order_cost": "1078.00"
+    }
+  },
+  {
+    "model": "api_order.order",
+    "pk": 8,
+    "fields": {
+      "user": 2,
+      "session_key": null,
+      "createdAt": "2023-10-13T14:49:40.300Z",
+      "updated": "2023-10-13T14:50:19.468Z",
+      "fullName": "Алексей Алексеев Алексеевич",
+      "email": "aleksey@test.com",
+      "phone": "+79991234567",
+      "deliveryType": "regular",
+      "paymentType": "someone",
+      "status": "accepted",
+      "city": "Москва",
+      "address": "Московская, 2, 23",
+      "paid": true,
+      "total_order_cost": "945.00"
+    }
+  },
+  {
+    "model": "api_order.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "product": 3,
+      "price": "189.00",
+      "count": 1
+    }
+  },
+  {
+    "model": "api_order.orderitem",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "product": 4,
+      "price": "399.00",
+      "count": 1
+    }
+  },
+  {
+    "model": "api_order.orderitem",
+    "pk": 3,
+    "fields": {
+      "order": 2,
+      "product": 4,
+      "price": "399.00",
+      "count": 5
+    }
+  },
+  {
+    "model": "api_order.orderitem",
+    "pk": 4,
+    "fields": {
+      "order": 2,
+      "product": 6,
+      "price": "999.00",
+      "count": 1
+    }
+  },
+  {
+    "model": "api_order.orderitem",
+    "pk": 5,
+    "fields": {
+      "order": 3,
+      "product": 4,
+      "price": "399.00",
+      "count": 69
+    }
+  },
+  {
+    "model": "api_order.orderitem",
+    "pk": 6,
+    "fields": {
+      "order": 3,
+      "product": 6,
+      "price": "999.00",
+      "count": 1
+    }
+  },
+  {
+    "model": "api_order.orderitem",
+    "pk": 7,
+    "fields": {
+      "order": 4,
+      "product": 3,
+      "price": "189.00",
+      "count": 15
+    }
+  },
+  {
+    "model": "api_order.orderitem",
+    "pk": 8,
+    "fields": {
+      "order": 4,
+      "product": 6,
+      "price": "999.00",
+      "count": 1
+    }
+  },
+  {
+    "model": "api_order.orderitem",
+    "pk": 9,
+    "fields": {
+      "order": 5,
+      "product": 6,
+      "price": "999.00",
+      "count": 1
+    }
+  },
+  {
+    "model": "api_order.orderitem",
+    "pk": 10,
+    "fields": {
+      "order": 6,
+      "product": 3,
+      "price": "189.00",
+      "count": 1
+    }
+  },
+  {
+    "model": "api_order.orderitem",
+    "pk": 11,
+    "fields": {
+      "order": 7,
+      "product": 3,
+      "price": "189.00",
+      "count": 2
+    }
+  },
+  {
+    "model": "api_order.orderitem",
+    "pk": 12,
+    "fields": {
+      "order": 8,
+      "product": 3,
+      "price": "189.00",
+      "count": 5
+    }
+  }
+]

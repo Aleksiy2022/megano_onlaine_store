@@ -30,7 +30,7 @@ class CartAPIView(APIView):
 
         cart = self.get_cart(request)
         product_id = request.data['id']
-        count = request.data['count']
+        count = int(request.data['count'])
         cart.add_product(product_id=product_id, count=count)
         serializer_data = self.get_products(cart)
         return Response(serializer_data)
